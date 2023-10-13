@@ -31,7 +31,11 @@
     // Configure tool-specific properties.
     "customizations": {
         "vscode": {
-            "extensions": [],
+            "extensions": [
+                "eamodio.gitlens",
+                "GitHub.copilot",
+                "GitHub.copilot-chat",
+            ],
             "settings": {
                 "terminal.integrated.shell.linux": "/bin/bash"
             }
