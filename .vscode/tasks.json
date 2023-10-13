@@ -12,10 +12,8 @@
                 "jekyll",
                 "serve",
                 "--host", "0.0.0.0",
-                "--incremental",
-                "--livereload",
-                "--trace",
                 "--watch",
+                "--trace",
             ],
             "problemMatcher": []
         },
