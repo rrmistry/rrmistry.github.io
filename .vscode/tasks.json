@@ -4,7 +4,12 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "bundle: jekyll: serve",
+            "label": "bundle: jekyll: serve (Start Website) (Default)",
+            "detail": "Run the Jekyll website locally to test it.",
+            "icon": {
+                "color": "terminal.ansiGreen",
+                "id": "server-process"
+            },
             "type": "process",
             "command": "bundle",
             "args": [
@@ -13,18 +18,36 @@
                 "serve",
                 "--host", "0.0.0.0",
                 "--watch",
+                // "--incremental",
+                // "--livereload",
                 "--trace",
             ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "isBackground": true,
+            "runOptions": {
+                "instanceLimit": 1,
+                "reevaluateOnRerun": true,
+                "runOn": "folderOpen"
+            },
             "problemMatcher": []
         },
         {
-            "label": "bundle: install",
+            "label": "bundle: install (Install Dependencies)",
+            "detail": "Install the Ruby gems. (pakcages to use by web server)",
+            "icon": {
+                "color": "terminal.ansiCyan",
+                "id": "desktop-download",
+            },
             "type": "shell",
             "command": "bundle",
             "args": [
                 "install"
             ],
-            "problemMatcher": []
+            "hide": true,
+            "problemMatcher": [],
         },
     ]
 }

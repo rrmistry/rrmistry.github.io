@@ -1,10 +1,16 @@
 ---
-layout: page
+layout: pdf
 title: Resume
-permalink: /resume/
+permalink: /resume
 ---
 
-# Summary:
+# **Rohit Mistry - Developer**
+
+<h5>
+    Pronounced: Row-hit
+    <br/>
+    Pronouns: He/Him
+</h5>
 
 With over a decade of experience in cloud architecture and insurance tech, I specialize in deploying scalable, cost-effective solutions across diverse organizations. My expertise in multi-cloud implementations and containerized applications drives my passion for cloud-native software development. Now seeking a full-time role to continue delivering cutting-edge software solutions, further my professional growth, and contribute to a team with shared goals and values.
 
@@ -21,84 +27,62 @@ _____
 
 # Skills Matrix:
 
-<h4>Containerization & Orchestration</h4>
-
-  AKS, GKE, Docker, Helm, Tilt, Okteto, K8s Lens
-
-<h4>Development & IDEs</h4>
-
-  C#/Python/Java/C++/JavaScript, VS Code, Visual Studio
-
-<h4>Cloud Platforms & Services</h4>
-
-  Azure CLI, Azure Portal, Azure Functions, Azure Logic Apps, Azure Data Factory, Azure Data Bricks, Azure SQL, Azure Cosmos DB, Azure Storage, Azure Key Vault, Azure Monitor, Azure Application Insights, Azure Data Studio, Azure Pipelines, Azure Repos, Azure Boards, Azure Artifacts, Snowflake
-
-<h4>Database Management</h4>
-
-  SSMS, Azure Data Lake, Azure SQL, Azure Cosmos DB, Snowflake, Microsoft SQL Server, PostgreSQL, MySQL
-
-<h4>DevOps & Version Control</h4>
-
-  DevOps CI/CD Pipelines, Terraform, Git, GitHub, Jira, Confluence, BitBucket, Azure Pipelines
-
-<h4>Scripting & Automation</h4>
-
-  PowerShell, Bash
-
-<h4>Business Intelligence</h4>
-
-  Power BI, Tableau
-
-<h4>Specialized Software</h4>
-
-  Moody's AXIS, Moody's ELink, Moody's GridLink
-
-<h4>Monitoring & Management</h4>
-
-  Azure Monitor, Azure Application Insights, K8s Lens, Prometheus, Grafana, Kubecost
+| **_Category_** | **Tools & Technologies** |
+| ----- | ----- |
+| **_Containerization & Orchestration_** | AKS, GKE, Docker, Helm, Tilt, Okteto, K8s Lens |
+| **_Development & IDEs_** | C#/Python/Java/C++/JavaScript, VS Code, Visual Studio |
+| **_Cloud Platforms & Services_** | Azure CLI, Azure Functions, Azure Logic Apps, Azure Data Factory, Azure Data Bricks, Azure SQL, Azure Cosmos DB, Azure Storage, Azure Key Vault, Azure Monitor, Azure Application Insights, Azure Data Studio, Azure Pipelines, Azure Repos, Azure Boards, Azure Artifacts, Snowflake |
+| **_Database Management_** | SSMS, Azure Data Lake, Azure SQL, Azure Cosmos DB, Snowflake, Microsoft SQL Server, PostgreSQL, MySQL |
+| **_DevOps & Version Control_** | DevOps CI/CD Pipelines, Terraform, Git, GitHub, Jira, Confluence, BitBucket, Azure Pipelines |
+| **_Scripting & Automation_** | PowerShell, Bash, Perl, Ruby |
+| **_Business Intelligence_** | Power BI, Tableau, Looker, Plotly |
+| **_Specialized Software_** | Moody's AXIS, Moody's ELink, Moody's GridLink |
+| **_Monitoring & Management_** | Azure Monitor, Azure Application Insights, K8s Lens, Prometheus, Grafana, Kubecost |
 
 _____
 
 # Experience
 
-**Founder, Righteous AI Inc., Nov. 2018 - Present**
+- **Founder, Righteous AI Inc., Nov. 2018 - Present**
 
-Consulting services for data science, data engineering, and automation in a cloud-based environment. [https://righteous.ai/](https://righteous.ai/)
+  Nestled in the heart of cloud innovation, Righteous AI Inc. has been my venture into the realms of data science, engineering, and automation, serving bespoke cloud-based solutions. Leading projects through a prism of transformation, my endeavors here span across digital metamorphoses and analytics solutions, knitting a full software stack that resonates with the core objectives of notable clientele like Manulife and Telus Mobility. It's a realm where data isn't just analyzed but narrated in a language that drives informed decision-making.
 
-- Project Management
-- Digital transformations
-- Analytics Solutions
-- Full Software Stack
-- Notable Clients: Manulife, Telus Mobility
+- **Data Engineer, Nov. 2017 - Dec. 2018**
 
-**Data Engineer, Nov. 2017 - Dec. 2018**
+  At WE Charity, I ventured into the altruistic landscape of social justice, wielding the power of cloud data engineering to foster a positive change. My stint here was about much more than just data analysis and BI dashboards; it was about integrating web microservices and APIs to weave a network that could bolster the Retail and CRM division, making a tangible impact in a cause that transcends beyond the digital sphere.
 
-WE Charity, [WE.org](https://www.we.org), 339 Queen St E, Toronto, M5A 1S9, ON. Canada, tel: 1-416-925-5894
+- **Software Developer, Jul. 2015 - Nov. 2017**
 
-- Non-profit Company for Social Justice. Retail and CRM division.
-- Cloud Data Engineering
-- Data Analysis and BI Dashboards
-- Web microservices and API integrations
+  Moody’s Analytics was a playground where actuarial science met high-performance cloud computing. As a Project Lead, I navigated through the complexities of cloud solutions, orchestrating projects that were not only successful but set a precedent in how cloud computing could be leveraged in actuarial science. It was a journey of leading, learning, and laying down milestones in the cloud infrastructure that would serve as beacons for forthcoming innovations.
 
-**Software Developer, Jul. 2015 - Nov. 2017**
+- **Technical Specialist, Sep. 2013 - Jul. 2015**
 
-Moody's Analytics, [GGY.com](https://www.ggy.com/), 5001 Yonge Street, Toronto, Suite 1300, M2N6P6, ON. Canada
+  At Teledyne Dalsa, the manufacturing realm opened up a vista where precision and innovation were the norm. Leading a team of four in the domain of Ultra-Violet CCD Imaging Cameras, my role was to ensure the wheels of production ran smoothly while upholding the highest standards of quality. Holding a controlled goods security clearance, I navigated through highly sensitive access, ensuring that every project was not only a success but a step forward in the technological landscape.
 
-- Actuarial Science
-- High Performance Cloud Computing
-- Project Lead
+_____
 
-**Technical Specialist, Sep. 2013 - Jul. 2015**
+# Certifications:
 
-Teledyne Dalsa, [TeledyneDALSA.com](https://www.teledynedalsa.com/en/home/), 605 McMurray Road, Waterloo, N2V 2E9, ON. Canada
+- [Art and Science of Machine LearningArt and Science of Machine Learning](https://www.coursera.org/account/accomplishments/verify/2TCT6DGFGFN2)
+  <br/>
+  Coursera, Issued Sep 2018, Credential ID 2TCT6DGFGFN2
 
-- Manufacturing Industry
-- Ultra-Violet CCD Imaging Cameras, repair, and production
-- Team Lead, (team of 4)
-- Held controlled goods security clearance for highly sensitive access.
+- [Feature EngineeringFeature Engineering](https://www.coursera.org/account/accomplishments/verify/CGGX8B272VVJ)
+  <br/>
+  Coursera, Issued Aug 2018, Credential ID CGGX8B272VVJ
+
+- [How Google does Machine LearningHow Google does Machine Learning](https://www.coursera.org/account/accomplishments/verify/BQ69DRFAA9MM)
+  <br/>
+  Coursera, Issued Aug 2018, Credential ID BQ69DRFAA9MM
 
 _____
 
 # Education:
 
 Bachelor's degree in physics with Computer Science minor from the University of Waterloo, Canada. 2013.
+
+_____
+
+# Relocation
+
+- Relocating to New Zealand, October 2023

@@ -20,6 +20,7 @@
 
 title: Rohit Mistry
 email: rohit.mistry@righteous.ai
+
 description: >- # this means to ignore newlines until "baseurl:"
   With over a decade of experience in cloud architecture and insurance tech,
   I specialize in deploying scalable, cost-effective solutions across diverse organizations.
@@ -35,6 +36,7 @@ github_username:  rrmistry
 
 # Build settings
 theme: minima
+
 plugins:
   - jekyll-feed
 
@@ -45,15 +47,20 @@ plugins:
 #
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+
+exclude:
+
+  # Standard exclusions
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+  # My exclusions
+  - docs/
