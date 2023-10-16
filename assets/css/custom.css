@@ -1,0 +1,30 @@
+.print-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(94, 140, 193);
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px; 
+    outline: none; 
+}
+
+.print-btn:hover {
+    background-color: #44499a;
+}
+
+.print-btn:active {
+    background-color: #0621e9;
+}
+
+.print-btn:focus {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #170557;
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+}

@@ -27,7 +27,7 @@ _____
 
 # Skills Matrix:
 
-| **_Category_** | **Tools & Technologies** |
+| **_Skill Category_** | **Tools & Technologies** |
 | ----- | ----- |
 | **_Containerization & Orchestration_** | AKS, GKE, Docker, Helm, Tilt, Okteto, K8s Lens |
 | **_Development & IDEs_** | C#/Python/Java/C++/JavaScript, VS Code, Visual Studio |
