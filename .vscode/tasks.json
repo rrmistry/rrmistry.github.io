@@ -18,8 +18,6 @@
                 "serve",
                 "--host", "0.0.0.0",
                 "--watch",
-                // "--incremental",
-                // "--livereload",
                 "--trace",
             ],
             "group": {
@@ -27,12 +25,34 @@
                 "isDefault": true
             },
             "isBackground": true,
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
             "runOptions": {
                 "instanceLimit": 1,
                 "reevaluateOnRerun": true,
                 "runOn": "folderOpen"
             },
-            "problemMatcher": []
+            "problemMatcher": {
+                "owner": "jekyll",
+                "applyTo": "allDocuments",
+                "fileLocation": "absolute",
+                "pattern": [
+                    {
+                        "regexp": "^(.*):([0-9]+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "severity": 3,
+                        "message": 4
+                    }
+                ],
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "^Configuration file: .*",
+                    "endsPattern": "^Server running... press ctrl-c to stop\\.$"
+                }
+            },
         },
         {
             "label": "bundle: install (Install Dependencies)",
