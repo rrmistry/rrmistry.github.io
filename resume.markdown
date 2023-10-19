@@ -79,7 +79,7 @@ _____
 
 # Education:
 
-Bachelor's degree in physics with Computer Science minor from the University of Waterloo, Canada. 2013.
+- Bachelor's degree in physics with Computer Science minor from the University of Waterloo, Canada. 2013.
 
 _____
 
