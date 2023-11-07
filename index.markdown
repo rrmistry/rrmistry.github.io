@@ -5,6 +5,6 @@
 layout: home
 ---
 
-<img src="assets/GOPR0034.JPG" style="object-fit: contain; width: 100%; height: 100%; position: relative; top: 0; left: 0;" />
+<img src="assets/GOPR0034.JPG" style="wide-image" />
 
 Welcome to the digital abode of a cloud architect with a penchant for scalable solutions and cutting-edge technology. Dive into my [About](/about) page to explore my journey or head over to my [Resume](/resume) to view the milestones of my tech expedition.
