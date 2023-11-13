@@ -35,7 +35,7 @@ permalink: /resume
 
 <h2>About Me: (Skills / Experience / Tech-Stack)</h2>
 
-<img src="assets/resume/Skills Matrix.png" style="wide-image" />
+{% include resume/chart.html %}
 
 <h4><b>Background:</b></h4>
 As a seasoned .NET developer hailing from Canada, I've embraced the rich tapestry of tech landscapes across North America. Currently, I am residing in the bustling heart of Auckland CBD, New Zealand, on a Working Holiday visa, valid until October 2024. This adventure is part of my commitment to personal growth and professional versatility.
