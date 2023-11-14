@@ -29,7 +29,7 @@ permalink: /resume
 > <br/>
 > **Citizenship:** Canadian
 > <br/>
-> **Visa:** Working Holiday Visa (Expires: Oct 2024) Eligible for any employer, any location, any role for 12 months with no restrictions. Visa eligible for extension of another 11 months or sponsorship.
+> **Visa:** Working Holiday Visa (Expires: Oct 2024) Eligible for any employer, any location, any number of hours, any role for 12 months with no restrictions. Visa eligible for extension of another 11 months or sponsorship.
 
 <hr />
 
@@ -38,42 +38,37 @@ permalink: /resume
 {% include resume/chart.html %}
 
 <h4><b>Background:</b></h4>
-As a seasoned .NET developer hailing from Canada, I've embraced the rich tapestry of tech landscapes across North America. Currently, I am residing in the bustling heart of Auckland CBD, New Zealand, on a Working Holiday visa, valid until October 2024. This adventure is part of my commitment to personal growth and professional versatility.
-
-<h4><b>Current Plans:</b></h4>
-In pursuit of expanding my horizons, I am seeking opportunities to contribute my robust .NET expertise within the dynamic New Zealand tech sector. My journey is not just about career development but also about finding a harmonious work-life balance, which I value deeply. I am open to various roles that challenge me and allow for growth, aligning with my professional trajectory.
-
-<h4><b>Work Aspirations:</b></h4>
-New Zealand's innovative landscape presents the perfect backdrop for the next chapter of my career. I am eager to integrate into a company that prioritizes mental well-being and fosters a supportive environment. My goal is to leverage my technical skills in a setting that appreciates the importance of mental health and the rejuvenating power of mindful work practices.
+Dedicated and experienced Cloud / .NET Consultant with a strong background in solution development, SQL, ETL processes, and .NET development in C#. Proven expertise in building data warehouses, implementing data structures, and data modeling. Skilled in integration technologies, DevOps practices, and Azure Services, with a commitment to continuous learning in fast-paced environments. Excellent in team collaboration and effective communication, aiming to deliver high-quality solutions that align with team and organizational goals.
 
 _____
 
 # Key Achievements:
-
-- Delivered a serverless solution that saved $3.8M CAD from the infrastructure budget in 2019.
-- Achieved $160,000 CAD monthly storage cost savings through Azure Services migration.
-- Enhanced Manulife's actuarial compute farm capacity by 50% in just six months using Terraform/Chef automation
-- Implemented Blazor ASP.NET automation, reducing manual workloads by 2500+ hours weekly across multiple teams.
+- Engineered a serverless solution, reducing infrastructure costs by $3.8M CAD.
+- Achieved a $160,000 CAD monthly cost saving through strategic Azure Services migration.
+- Enhanced computational capacity by 50% in six months through Terraform/Chef automation.
+- Automated Blazor ASP.NET processes, saving over 2500 hours weekly across teams.
 
 _____
 
-# Experience
+# Recent Professional Experience:
 
-- <b>Cloud / .NET Consultant, at Righteous AI, in Toronto, Canada, Nov. 2018 - Present</b>
+<b>Cloud / .NET Consultant, <a href="https://www.righteous.ai" target="_blank">Righteous AI, Toronto, Canada</a> (Nov 2018 - Present/Dec 2023)</b>
 
-  Nestled in the heart of cloud innovation, Righteous AI Inc. has been my venture into the realms of data science, engineering, and automation, serving bespoke cloud-based solutions. Leading projects through a prism of transformation, my endeavors here span across digital metamorphoses and analytics solutions, knitting a full software stack that resonates with the core objectives of notable clientele like Manulife and Telus Mobility. It's a realm where data isn't just analyzed but narrated in a language that drives informed decision-making.
+  - Spearheaded cloud-based solution development and data engineering projects.
+  - Collaborated closely with stakeholders to design, develop, and maintain high-quality solutions.
+  - Implemented robust test plans and automated software deployments using Azure DevOps.
+  - Ensured compliance with OWASP Top 10 for application security best practices.
+  - Provided L3/L2 support for production issues, ensuring timely resolution and minimal downtime.
 
-- <b>ASP.NET Developer / Data Engineer, in Toronto, Canada, Nov. 2017 - Dec. 2018</b>
+<b>ASP.NET Developer / Data Engineer, <a href="https://www.we.org/en-US/" target="_blank">WE Charity, Toronto, Canada</a> (Nov 2017 - Dec 2018)</b>
 
-  At WE Charity, I ventured into the altruistic landscape of social justice, wielding the power of cloud data engineering to foster a positive change. My stint here was about much more than just data analysis and BI dashboards; it was about integrating web microservices and APIs to weave a network that could bolster the Retail and CRM division, making a tangible impact in a cause that transcends beyond the digital sphere.
+  - Developed and integrated web services and APIs, significantly enhancing data processes.
+  - Played a key role in data transformation projects, employing strong ETL techniques.
 
-- <b>C++ / C# .NET Developer, in Toronto, Canada, Jul. 2015 - Nov. 2017</b>
+<b>C++ / C# .NET Developer, <a href="https://www.ggy.com/" target="_blank">Moody’s Analytics, Toronto, Canada</a> (Jul 2015 - Nov 2017)</b>
 
-  Moody’s Analytics was a playground where actuarial science met high-performance cloud computing. As a Project Lead, I navigated through the complexities of cloud solutions, orchestrating projects that were not only successful but set a precedent in how cloud computing could be leveraged in actuarial science. It was a journey of leading, learning, and laying down milestones in the cloud infrastructure that would serve as beacons for forthcoming innovations.
-
-- <b>Lab Technician, in Waterloo, Canada, Sep. 2013 - Jul. 2015</b>
-
-  At Teledyne Dalsa, the manufacturing realm opened up a vista where precision and innovation were the norm. Leading a team of four in the domain of Ultra-Violet CCD Imaging Cameras, my role was to ensure the wheels of production ran smoothly while upholding the highest standards of quality. Holding a controlled goods security clearance, I navigated through highly sensitive access, ensuring that every project was not only a success but a step forward in the technological landscape.
+  - Led cloud computing projects, emphasizing .NET development and cloud infrastructure optimization.
+  - Pioneered innovative solutions, setting industry standards in actuarial cloud computing.
 
 _____
 
@@ -81,9 +76,13 @@ _____
 
 | **_Skill Category_** | **Tools & Technologies** |
 | ----- | ----- |
+| **_Languages_** | C#, Python, Java, C++, TypeScript/JavaScript |
+| **_Frameworks_** | ASP.NET, Blazor, Blazor Server, Blazor WASM, .NET MAUI, Angular, React, Django |
+| **_Work Organization Tools_** | Jira, Confluence, Azure Boards, GitHub Issues |
+| **_Productivity AI Tools_** | ChatGPT 4, GitHub Copilot, Meta Llama 2, Auto-GPT, GPT-Engineer |
 | **_Containerization & Orchestration_** | AKS, GKE, Docker, Helm, Tilt, Okteto, K8s Lens |
-| **_Development & IDEs_** | C#/Python/Java/C++/JavaScript, VS Code, Visual Studio |
-| **_Cloud Platforms & Services_** | Azure CLI, Azure Functions, Azure Logic Apps, Azure Data Factory, Azure Data Bricks, Azure SQL, Azure Cosmos DB, Azure Storage, Azure Key Vault, Azure Monitor, Azure Application Insights, Azure Data Studio, Azure Pipelines, Azure Repos, Azure Boards, Azure Artifacts, Snowflake |
+| **_Development & IDEs_** | VS Code, Visual Studio, Dev Containers, GitHub CodeSpaces, GitPod |
+| **_Cloud Platforms & Services_** | Azure CLI, Azure Functions, Azure Logic Apps, Azure Data Factory, Azure Data Warehouse, Azure Synapse Data Warehouse, Azure Data Bricks, Azure SQL, Azure Cosmos DB, Azure Storage, Azure Key Vault, Azure Monitor, Azure Application Insights, Azure Data Studio, Azure Pipelines, Azure Repos, Azure Boards, Azure Artifacts, Snowflake |
 | **_Database Management_** | SSMS, Azure Data Lake, Azure SQL, Azure Cosmos DB, Snowflake, Microsoft SQL Server, PostgreSQL, MySQL |
 | **_DevOps & Version Control_** | DevOps CI/CD Pipelines, Terraform, Git, GitHub, Jira, Confluence, BitBucket, Azure Pipelines |
 | **_Scripting & Automation_** | PowerShell, Bash, Perl, Ruby |
