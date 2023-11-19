@@ -33,10 +33,6 @@ permalink: /resume
 
 <hr />
 
-<h2>About Me: (Skills / Experience / Tech-Stack)</h2>
-
-{% include resume/chart.html %}
-
 <h4><b>Background:</b></h4>
 Dedicated and experienced Cloud / .NET Consultant with a strong background in solution development, SQL, ETL processes, and .NET development in C#. Proven expertise in building data warehouses, implementing data structures, and data modeling. Skilled in integration technologies, DevOps practices, and Azure Services, with a commitment to continuous learning in fast-paced environments. Excellent in team collaboration and effective communication, aiming to deliver high-quality solutions that align with team and organizational goals.
 
@@ -117,3 +113,11 @@ _____
 # Relocation
 
 - Relocating to New Zealand, October 2023, under Working Holiday Visa. Eligible for any employer, any location, any role for 12 months with no restrictions. Visa eligible for extension of another 11 months or sponsorship.
+
+<hr />
+
+<div class="element-to-print">
+  <h2>About Me: (Skills / Experience / Tech-Stack)</h2>
+
+  {% include resume/chart.html %}
+</div>
