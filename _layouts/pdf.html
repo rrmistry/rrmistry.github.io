@@ -48,11 +48,13 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      var printBtn = document.querySelector('.print-btn');
-      if (printBtn) {
-        printBtn.addEventListener('click', function (e) {
-          e.preventDefault();
-          window.print();
+      var printBtns = document.querySelectorAll('.print-btn');
+      if (printBtns) {
+        printBtns.forEach(function(printBtn) {
+          printBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.print();
+          });
         });
       }
     });
