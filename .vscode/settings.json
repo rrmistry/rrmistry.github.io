@@ -8,5 +8,6 @@
 		"**/Thumbs.db": true,
 		"**/.ruby-lsp": true,
 		"_site": true
-	}
+	},
+	"editor.insertSpaces": false,
 }
