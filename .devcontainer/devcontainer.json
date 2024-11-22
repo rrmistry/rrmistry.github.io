@@ -4,8 +4,8 @@
     "name": "Svelte CV",
 
     // // use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-    // // Tag list: https://mcr.microsoft.com/v2/devcontainers/javascript-node/tags/list
-    // "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+    // // Tag list: https://mcr.microsoft.com/v2/devcontainers/typescript-node/tags/list
+    // "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
 
     "build": {
         "dockerfile": "Dockerfile",
