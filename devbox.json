@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.4/.schema/devbox.schema.json",
+  "packages": [
+    "nodejs@20",
+    "bash@latest",
+    "neovim@latest",
+    "git@latest",
+    "go-task@3.38.0",
+    "bash-completion@latest",
+    "tailwindcss@latest"
+  ],
+  "include":     [],
+  "description": "DevBox with standard tools and packages easily installed",
+  "env": {
+    "PROMPT_COMMAND": "echo -e \"\\nCurrent Directory: $(pwd)\"",
+    "PS1":            "📦 devbox> "
+  },
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome! See README.md for tips on contributing to this repo.'"
+    ],
+    "scripts": {
+      "npm-install": [
+        "npm install"
+      ],
+      "test": [
+        "echo \"Error: no test specified\" && exit 1"
+      ]
+    }
+  }
+}

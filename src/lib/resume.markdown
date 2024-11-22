@@ -10,30 +10,12 @@ permalink: /resume
       <b>Rohit Mistry - Cloud / .NET Consultant</b>
     </h1>
   </div>
-  <div class="grid-item grid-item-right">
-    <div class="no-print">
-      <button class="print-btn">Print PDF</button>
-    </div>
-  </div>
+  <slot></slot>
 </div>
-
-> **Email:** [mistry.rohit@live.ca](mailto:mistry.rohit@live.ca)
-> <br/>
-> **Phone:** [(021) 275-5338](tel:+64212755338)
-> <br/>
-> **LinkedIn:** <a href="https://www.linkedin.com/in/rohit-mistry/" target="_blank">https://www.linkedin.com/in/rohit-mistry/</a>
-> <br/>
-> **GitHub:** [https://github.com/rrmistry](https://github.com/rrmistry)
-> <br/>
-> **Located:** Auckland Central, New Zealand
-> <br/>
-> **Citizenship:** Canadian
-> <br/>
-> **Visa:** Working Holiday Visa (Expires: Oct 2024) Eligible for any employer, any location, any number of hours, any role for 12 months with no restrictions. Visa eligible for extension of another 11 months or sponsorship.
 
 <hr />
 
-<h4><b>Background:</b></h4>
+# Background:
 Dedicated and experienced Cloud / .NET Consultant with a strong background in solution development, SQL, ETL processes, and .NET development in C#. Proven expertise in building data warehouses, implementing data structures, and data modeling. Skilled in integration technologies, DevOps practices, and Azure Services, with a commitment to continuous learning in fast-paced environments. Excellent in team collaboration and effective communication, aiming to deliver high-quality solutions that align with team and organizational goals.
 
 _____
@@ -90,17 +72,11 @@ _____
 
 # Certifications:
 
-- [Art and Science of Machine LearningArt and Science of Machine Learning](https://www.coursera.org/account/accomplishments/verify/2TCT6DGFGFN2)
-  <br/>
-  Coursera, Issued Sep 2018, Credential ID 2TCT6DGFGFN2
+- [Art and Science of Machine LearningArt and Science of Machine Learning](https://www.coursera.org/account/accomplishments/verify/2TCT6DGFGFN2)<br/>Coursera, Issued Sep 2018, Credential ID 2TCT6DGFGFN2
 
-- [Feature EngineeringFeature Engineering](https://www.coursera.org/account/accomplishments/verify/CGGX8B272VVJ)
-  <br/>
-  Coursera, Issued Aug 2018, Credential ID CGGX8B272VVJ
+- [Feature EngineeringFeature Engineering](https://www.coursera.org/account/accomplishments/verify/CGGX8B272VVJ)<br/>Coursera, Issued Aug 2018, Credential ID CGGX8B272VVJ
 
-- [How Google does Machine LearningHow Google does Machine Learning](https://www.coursera.org/account/accomplishments/verify/BQ69DRFAA9MM)
-  <br/>
-  Coursera, Issued Aug 2018, Credential ID BQ69DRFAA9MM
+- [How Google does Machine LearningHow Google does Machine Learning](https://www.coursera.org/account/accomplishments/verify/BQ69DRFAA9MM)<br/>Coursera, Issued Aug 2018, Credential ID BQ69DRFAA9MM
 
 _____
 
@@ -110,14 +86,6 @@ _____
 
 _____
 
-# Relocation
-
-- Relocating to New Zealand, October 2023, under Working Holiday Visa. Eligible for any employer, any location, any role for 12 months with no restrictions. Visa eligible for extension of another 11 months or sponsorship.
-
-<hr />
-
-<div class="element-to-print">
-  <h2>About Me: (Skills / Experience / Tech-Stack)</h2>
-
-  {% include resume/chart.html %}
+<div>
+  <slot></slot>
 </div>

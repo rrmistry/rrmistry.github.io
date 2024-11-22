@@ -6,8 +6,8 @@ set -e
 # Print commands
 set -x
 
-# Install Jekyll
-gem install bundler jekyll
+# Install DevBox packages
+devbox install
 
-# Check Ruby version
-ruby -v
+# Run setup script
+devbox run npm-install
