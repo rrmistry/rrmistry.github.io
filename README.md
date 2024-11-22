@@ -1,38 +1,18 @@
-# sv
+# rrmistry.github.io
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+[![Deploy to GitHub Pages](https://github.com/rrmistry/rrmistry.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/rrmistry/rrmistry.github.io/actions/workflows/deploy.yml)
 
-## Creating a project
+This is the static site for [rrmistry.github.io](https://rrmistry.github.io).
 
-If you're seeing this, you've probably already done this step. Congrats!
+The source code for this site is available on GitHub: [rrmistry/rrmistry.github.io](https://github.com/rrmistry/rrmistry.github.io)
 
-```bash
-# create a new project in the current directory
-npx sv create
+This site uses the following technologies:
 
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+- [Svelte 5](https://svelte.dev/)
+    - [mdsvex](https://mdsvex.pngwn.io/)
+- [Tailwind CSS](https://tailwindcss.com/)
+    - [@tailwindcss/typography](https://github.com/tailwindlabs/tailwindcss-typography)
+- [Devbox](https://github.com/jetify-com/devbox)
+- [Dev Container](https://github.com/devcontainers/features)
+- [GitHub Actions](https://github.com/features/actions)
+- [GitHub Pages](https://pages.github.com/)
