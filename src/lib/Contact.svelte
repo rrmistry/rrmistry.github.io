@@ -1,5 +1,6 @@
-<div class="flex-wrap gap-1 md:flex">
-	<div class="mb-2 flex-1 basis-1/4 items-center gap-2 md:flex">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+
+	<div class="flex items-center gap-2">
 		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
 			<path
 				fill="currentColor"
@@ -9,7 +10,7 @@
 		<a href="mailto:mistry.rohit@live.ca">mistry.rohit@live.ca</a>
 	</div>
 
-	<div class="mb-2 flex-1 basis-1/4 items-center gap-2 md:flex">
+	<div class="flex items-center gap-2">
 		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
 			<path
 				fill="currentColor"
@@ -19,7 +20,7 @@
 		<a href="tel:+16475736592">+1 647 573 6592</a>
 	</div>
 
-	<div class="mb-2 flex-1 basis-1/4 items-center gap-2 md:flex">
+	<div class="flex items-center gap-2">
 		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
 			<path
 				fill="currentColor"
@@ -29,7 +30,7 @@
 		Toronto, Canada
 	</div>
 
-	<div class="mb-2 flex-1 basis-1/4 items-center gap-2 md:flex">
+	<div class="flex items-center gap-2">
 		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
 			<path
 				fill="currentColor"
@@ -39,7 +40,7 @@
 		<a href="https://github.com/rrmistry" target="_blank">rrmistry</a>
 	</div>
 
-	<div class="mb-2 flex-1 basis-1/4 items-center gap-2 md:flex">
+	<div class="flex items-center gap-2">
 		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
 			<path
 				fill="currentColor"
@@ -49,7 +50,7 @@
 		<a href="https://www.linkedin.com/in/rohit-mistry/" target="_blank">rohit-mistry</a>
 	</div>
 
-	<div class="mb-2 flex-1 basis-1/4 items-center gap-2 md:flex">
+	<div class="flex items-center gap-2">
 		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
 			<path
 				fill="currentColor"

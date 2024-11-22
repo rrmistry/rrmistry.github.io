@@ -26,16 +26,6 @@
 </nav>
 
 <style>
-	@media print {
-		.no-print {
-			display: none;
-		}
-		/*
-		.element-to-print {
-			display: block;
-		}
-		*/
-	}
 	.from-transparent {
 		background-color: transparent;
 	}

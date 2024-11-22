@@ -6,5 +6,15 @@
 
 <Resume>
 	<Contact />
-	<Print />
+	<div class="mt-4">
+		<Print />
+	</div>
 </Resume>
+
+<div class="no-print">
+	<hr />
+
+	<p>
+		The source code for this resume is available on GitHub at <a href="https://github.com/rrmistry/rrmistry.github.io" target="_blank">rrmistry/rrmistry.github.io</a>
+	</p>
+</div>
