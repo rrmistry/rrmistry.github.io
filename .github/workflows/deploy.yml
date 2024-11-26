@@ -21,7 +21,8 @@ jobs:
             **/package-lock.json
           key: "${{ runner.os }}-devbox-${{ hashFiles('**/devbox.lock') }}-npm-${{ hashFiles('**/package-lock.json') }}"
           restore-keys: |
-            ${{ runner.os }}-devbox
+            ${{ runner.os }}-devbox-${{ hashFiles('**/devbox.lock') }}-npm-${{ hashFiles('**/package-lock.json') }}
+            ${{ runner.os }}-devbox-
 
       - name: Install devbox
         uses: jetify-com/devbox-install-action@v0.11.0
