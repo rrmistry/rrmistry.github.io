@@ -22,15 +22,3 @@ RUN wget --quiet --output-document=/dev/stdout https://get.jetify.com/devbox | b
 
 # Add devbox completions to bashrc
 RUN echo "source <(devbox completion bash)" >> ${HOME}/.bashrc
-
-# Map workspace folder
-ARG CONTAINER_WORKSPACE_FOLDER=/workspace
-WORKDIR ${CONTAINER_WORKSPACE_FOLDER}
-
-# Copy devbox.json to install dependencies
-COPY devbox.json devbox.json
-RUN devbox install
-
-# Copy package.json to install dependencies
-COPY package.json package.json
-RUN devbox run npm-install
