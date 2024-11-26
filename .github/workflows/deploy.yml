@@ -20,11 +20,11 @@ jobs:
         id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
         with:
           path: |
-            **/node_modules/
-            **/package-lock.json
-          key: "${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}"
+            node_modules/
+            package-lock.json
+          key: "${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}"
           restore-keys: |
-            ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+            ${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}
             ${{ runner.os }}-npm-
 
       - name: Install NPM packages
