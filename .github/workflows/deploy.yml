@@ -11,21 +11,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - uses: actions/cache@v3
-        id: devbox-cache # use this to check for `cache-hit` ==> if: steps.devbox-cache.outputs.cache-hit != 'true'
-        with:
-          path: |
-            **/.devbox/
-            **/.devbox.lock
-            **/node_modules/
-            **/package-lock.json
-          key: "${{ runner.os }}-devbox-${{ hashFiles('**/devbox.lock') }}-npm-${{ hashFiles('**/package-lock.json') }}"
-          restore-keys: |
-            ${{ runner.os }}-devbox-${{ hashFiles('**/devbox.lock') }}-npm-${{ hashFiles('**/package-lock.json') }}
-            ${{ runner.os }}-devbox-
-
       - name: Install devbox
         uses: jetify-com/devbox-install-action@v0.11.0
+        with:
+          enable-cache: 'true'
+
+      - uses: actions/cache@v3
+        id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
+        with:
+          path: |
+            **/node_modules/
+            **/package-lock.json
+          key: "${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}"
+          restore-keys: |
+            ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+            ${{ runner.os }}-npm-
 
       - name: Install NPM packages
         run: devbox run npm-install
