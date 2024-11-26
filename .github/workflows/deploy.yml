@@ -22,9 +22,9 @@ jobs:
           path: |
             node_modules/
             package-lock.json
-          key: "${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}"
+          key: "${{ runner.os }}-${{ runner.arch }}-npm-${{ hashFiles('package-lock.json') }}"
           restore-keys: |
-            ${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}
+            ${{ runner.os }}-${{ runner.arch }}-npm-${{ hashFiles('package-lock.json') }}
             ${{ runner.os }}-npm-
 
       - name: Install NPM packages
