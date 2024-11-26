@@ -11,6 +11,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - uses: actions/cache@v3
+        id: devbox-cache # use this to check for `cache-hit` ==> if: steps.devbox-cache.outputs.cache-hit != 'true'
+        with:
+          path: |
+            **/.devbox/
+            **/.devbox.lock
+            **/node_modules/
+            **/package-lock.json
+          key: "${{ runner.os }}-devbox-${{ hashFiles('**/devbox.lock') }}-npm-${{ hashFiles('**/package-lock.json') }}"
+          restore-keys: |
+            ${{ runner.os }}-devbox
+
       - name: Install devbox
         uses: jetify-com/devbox-install-action@v0.11.0
 
