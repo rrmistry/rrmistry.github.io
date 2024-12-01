@@ -13,7 +13,7 @@ permalink: /resume
   <slot></slot>
 </div>
 
-<hr />
+_____
 
 # Background:
 Dedicated and experienced Cloud / .NET Consultant with a strong background in solution development, SQL, ETL processes, and .NET development in C#. Proven expertise in building data warehouses, implementing data structures, and data modeling. Skilled in integration technologies, DevOps practices, and Azure Services, with a commitment to continuous learning in fast-paced environments. Excellent in team collaboration and effective communication, aiming to deliver high-quality solutions that align with team and organizational goals.

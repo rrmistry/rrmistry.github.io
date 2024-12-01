@@ -45,6 +45,7 @@
                 "Codeium.codeium",
                 "eamodio.gitlens",
                 "esbenp.prettier-vscode",
+                "github.vscode-github-actions",
                 "hediet.vscode-drawio",
                 "jetpack-io.devbox",
                 "moalamri.inline-fold",
