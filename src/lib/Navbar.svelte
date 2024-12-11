@@ -20,7 +20,7 @@
 	class:shadow-lg={isScrolled}
 >
 	<div class="container mx-auto flex items-center justify-between px-4 py-3">
-		<div class="text-xl font-bold text-white">Rohit Mistry - Cloud / .NET Consultant</div>
+		<div class="text-xl font-bold text-white">Rohit Mistry - Cloud / Data Architect</div>
 		<Print />
 	</div>
 </nav>
