@@ -5,6 +5,22 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "NPM Attach",
+            "type": "node",
+            "port": 9229,
+            "request": "attach",
+            "skipFiles": [
+                "<node_internals>/**",
+                "${workspaceFolder}/node_modules/**"
+            ],
+            // "preLaunchTask": "dev",
+            "presentation": {
+                "hidden": false,
+                "group": "Devbox",
+                "order": 1
+            },
+        },
+        {
             "name": "NPM dev",
             "type": "node",
             "request": "launch",
@@ -16,6 +32,25 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-        }
+            "presentation": {
+                "hidden": false,
+                "group": "Simple",
+                "order": 2
+            }
+        },
+        {
+            "name": "Attach by Process ID",
+            "processId": "${command:PickProcess}",
+            "request": "attach",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node",
+            "presentation": {
+                "hidden": false,
+                "group": "Simple",
+                "order": 2
+            }
+        },
     ]
 }

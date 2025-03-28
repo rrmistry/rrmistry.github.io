@@ -7,24 +7,25 @@
     "git@latest",
     "go-task@3.38.0",
     "bash-completion@latest",
-    "tailwindcss@latest"
+    "tailwindcss@latest",
+    "killport@latest",
   ],
-  "include":     [],
+  "include": [],
   "description": "DevBox with standard tools and packages easily installed",
   "env": {
     "PROMPT_COMMAND": "echo -e \"\\nCurrent Directory: $(pwd)\"",
-    "PS1":            "📦 devbox> "
+    "PS1": "📦 devbox> "
   },
   "shell": {
     "init_hook": [
-      "echo 'Welcome! See README.md for tips on contributing to this repo.'"
+      "echo 'Welcome! See README.md for tips on contributing to this repo.'",
     ],
     "scripts": {
       "npm-install": [
         "npm install"
       ],
-      "test": [
-        "echo \"Error: no test specified\" && exit 1"
+      "debug": [
+        "npm run dev:debug -- --host=0.0.0.0"
       ]
     }
   }

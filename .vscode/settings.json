@@ -7,7 +7,11 @@
 		"**/.DS_Store": true,
 		"**/Thumbs.db": true,
 		"**/.ruby-lsp": true,
-		"_site": true
+		"_site": true,
+		".svelte-kit/**": true,
+		"**/node_modules/**": true,
 	},
 	"editor.insertSpaces": false,
+	"devbox.autoShellOnTerminal": true,
+	"editor.formatOnSave": true,
 }

@@ -7,13 +7,13 @@ permalink: /resume
 <div class="grid-container">
   <div class="grid-item">
     <h1>
-      <b>Rohit Mistry - Cloud / Data Architect</b>
+      <b>Rohit Mistry</b>
     </h1>
   </div>
   <slot></slot>
 </div>
 
-_____
+---
 
 # Background:
 
@@ -23,71 +23,72 @@ Driving Enterprise Data Governance, Security, and Architectural Excellence
 
 Innovative technologist with a proven track record of designing robust, compliant data ecosystems that bridge technical complexity and organizational objectives. Expert in architecting scalable cloud solutions that ensure regulatory compliance, enhance operational security, and enable data-driven decision-making through seamless integration of cutting-edge technologies and cross-functional collaboration.
 
-_____
+---
 
 # Key Achievements:
+
 - Engineered a serverless solution, reducing infrastructure costs by $3.8M CAD.
 - Achieved a $160,000 CAD monthly cost saving through strategic Azure Services migration.
 - Enhanced computational capacity by 50% in six months through Terraform/Chef automation.
 - Automated Blazor ASP.NET processes, saving over 2500 hours weekly across teams.
 
-_____
+---
 
 # Most Recent Professional Experience:
 
 <b>Cloud / Data Architect, <a href="https://www.righteous.ai" target="_blank">Righteous AI, Toronto, Canada</a> (Nov 2018 - Present, 5 years)</b>
 
-  - Running private consulting practice for clients in the finance sector.
-  - Execute cloud-based solution development and data engineering projects.
-  - Collaborated closely with stakeholders to design, develop, and maintain high-quality solutions.
-  - **Key Technologies:** Informatica, Azure SQL, Kubernetes, Python
+- Running private consulting practice for clients in the finance sector.
+- Execute cloud-based solution development and data engineering projects.
+- Collaborated closely with stakeholders to design, develop, and maintain high-quality solutions.
+- **Key Technologies:** Informatica, Azure SQL, Kubernetes, Python
 
 <b>ASP.NET & Python Developer / Data Engineer, <a href="https://www.we.org/en-US/" target="_blank">WE Charity, Toronto, Canada</a> (Nov 2017 - Dec 2018, 1 year)</b>
 
-  - Developed and integrated web services and APIs, significantly enhancing data processes.
-  - Played a key role in data transformation projects, employing strong ETL techniques.
-  - **Key Technologies:** Azure Data Factory, Azure SQL, Power BI, Azure App Service, Azure Functions, C# / Python
+- Developed and integrated web services and APIs, significantly enhancing data processes.
+- Played a key role in data transformation projects, employing strong ETL techniques.
+- **Key Technologies:** Azure Data Factory, Azure SQL, Power BI, Azure App Service, Azure Functions, C# / Python
 
 <b>C++ / C# .NET Developer, <a href="https://www.ggy.com/" target="_blank">Moody’s Analytics, Toronto, Canada</a> (Jul 2015 - Nov 2017, 2 years)</b>
 
-  - Led cloud computing projects, emphasizing .NET development and cloud infrastructure optimization.
-  - Pioneered innovative solutions, setting industry standards in actuarial cloud computing.
-  - **Key Technologies:** Azure VMs, Terraform, C++, C# / .NET, VBA / VB.NET
+- Led cloud computing projects, emphasizing .NET development and cloud infrastructure optimization.
+- Pioneered innovative solutions, setting industry standards in actuarial cloud computing.
+- **Key Technologies:** Azure VMs, Terraform, C++, C# / .NET, VBA / VB.NET
 
-_____
+---
 
 # Skills Matrix:
 
-| **_Skill Category_** | **Tools & Technologies** |
-| ----- | ----- |
-| **_Languages_** | Python, C#, Java, C++, TypeScript/JavaScript, VB.NET, HTML, CSS |
-| **_Frameworks_** | ASP.NET, Blazor, Blazor Server, Blazor WASM, .NET MAUI, Angular, React, Django |
-| **_Work Organization Tools_** | Jira, Confluence, Azure Boards, GitHub Issues |
-| **_Productivity AI Tools_** | ChatGPT 4, GitHub Copilot, Meta Llama, Ollama, N8N |
-| **_Containerization & Orchestration_** | AKS, GKE, Docker, Helm, Tilt, Okteto, K8s Lens, k9s, timoni |
-| **_Development & IDEs_** | VS Code, Visual Studio, Dev Containers, GitHub CodeSpaces, GitPod |
-| **_Cloud Platforms & Services_** | Azure CLI, Azure Functions, Azure Logic Apps, Informatica, Azure Data Factory, Azure Data Warehouse, Azure Synapse Data Warehouse, Azure Data Bricks, Azure SQL, Azure Cosmos DB, Azure Storage, Azure Key Vault, Azure Monitor, Azure Application Insights, Azure Data Studio, Azure Pipelines, Azure Repos, Azure Boards, Azure Artifacts, Snowflake |
-| **_Database Management_** | SSMS, Azure Data Lake, Azure SQL, Azure Cosmos DB, Snowflake, Microsoft SQL Server, PostgreSQL, MySQL |
-| **_DevOps & Version Control_** | DevOps CI/CD Pipelines, Terraform, Git, GitHub, Jira, Confluence, BitBucket, Azure Pipelines |
-| **_Scripting & Automation_** | PowerShell, Bash, Perl, Ruby |
-| **_Business Intelligence_** | Power BI, Tableau, Looker, Plotly |
-| **_Monitoring & Management_** | Azure Monitor, Azure Application Insights, K8s Lens, Prometheus, Grafana, Kubecost |
-| **_Specialized Software_** | Moody's GGY AXIS, Moody's GGY ELink, Moody's GGY GridLink, Informatica |
+| **_Skill Category_**                   | **Tools & Technologies**                                                                                                                                                                                                                                                                                                                               |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **_Languages_**                        | Python, C#, Java, C++, TypeScript/JavaScript, VB.NET, HTML, CSS                                                                                                                                                                                                                                                                                        |
+| **_Frameworks_**                       | ASP.NET, Blazor, Blazor Server, Blazor WASM, .NET MAUI, Angular, React, Django                                                                                                                                                                                                                                                                         |
+| **_Work Organization Tools_**          | Jira, Confluence, Azure Boards, GitHub Issues                                                                                                                                                                                                                                                                                                          |
+| **_Productivity AI Tools_**            | ChatGPT 4, GitHub Copilot, Meta Llama, Ollama, N8N                                                                                                                                                                                                                                                                                                     |
+| **_Containerization & Orchestration_** | AKS, GKE, Docker, Helm, Tilt, Okteto, K8s Lens, k9s, timoni                                                                                                                                                                                                                                                                                            |
+| **_Development & IDEs_**               | VS Code, Visual Studio, Dev Containers, GitHub CodeSpaces, GitPod                                                                                                                                                                                                                                                                                      |
+| **_Cloud Platforms & Services_**       | Azure CLI, Azure Functions, Azure Logic Apps, Informatica, Azure Data Factory, Azure Data Warehouse, Azure Synapse Data Warehouse, Azure Data Bricks, Azure SQL, Azure Cosmos DB, Azure Storage, Azure Key Vault, Azure Monitor, Azure Application Insights, Azure Data Studio, Azure Pipelines, Azure Repos, Azure Boards, Azure Artifacts, Snowflake |
+| **_Database Management_**              | SSMS, Azure Data Lake, Azure SQL, Azure Cosmos DB, Snowflake, Microsoft SQL Server, PostgreSQL, MySQL                                                                                                                                                                                                                                                  |
+| **_DevOps & Version Control_**         | DevOps CI/CD Pipelines, Terraform, Git, GitHub, Jira, Confluence, BitBucket, Azure Pipelines                                                                                                                                                                                                                                                           |
+| **_Scripting & Automation_**           | PowerShell, Bash, Perl, Ruby                                                                                                                                                                                                                                                                                                                           |
+| **_Business Intelligence_**            | Power BI, Tableau, Looker, Plotly                                                                                                                                                                                                                                                                                                                      |
+| **_Monitoring & Management_**          | Azure Monitor, Azure Application Insights, K8s Lens, Prometheus, Grafana, Kubecost                                                                                                                                                                                                                                                                     |
+| **_Specialized Software_**             | Moody's GGY AXIS, Moody's GGY ELink, Moody's GGY GridLink, Informatica                                                                                                                                                                                                                                                                                 |
 
-_____
+---
 
 # Soft Skills:
 
-| **_Skill Category_** | **Approach** |
-| ----- | ----- |
-| **_Leadership_** | Delegation, Negotiation, Teamwork |
-| **_Problem Solving_** | Analytical, Critical Thinking, Problem Solving |
-| **_Teamwork_** | Communication, Collaboration, Team Building |
-| **_Time Management_** | Organizational, Time Management, Prioritization, Note Taking |
-| **_Conflict Resolution_** | Communication, Negotiation, Conflict Management |
-| **_Communication_** | Presentation, Public Speaking, Writing |
+| **_Skill Category_**      | **Approach**                                                 |
+| ------------------------- | ------------------------------------------------------------ |
+| **_Leadership_**          | Delegation, Negotiation, Teamwork                            |
+| **_Problem Solving_**     | Analytical, Critical Thinking, Problem Solving               |
+| **_Teamwork_**            | Communication, Collaboration, Team Building                  |
+| **_Time Management_**     | Organizational, Time Management, Prioritization, Note Taking |
+| **_Conflict Resolution_** | Communication, Negotiation, Conflict Management              |
+| **_Communication_**       | Presentation, Public Speaking, Writing                       |
 
-_____
+---
 
 # Certifications:
 
@@ -97,13 +98,13 @@ _____
 
 - [How Google does Machine LearningHow Google does Machine Learning](https://www.coursera.org/account/accomplishments/verify/BQ69DRFAA9MM)<br/>Coursera, Issued Aug 2018, Credential ID BQ69DRFAA9MM
 
-_____
+---
 
 # Education:
 
 - Bachelor's degree in physics with Computer Science minor from the University of Waterloo, Canada. 2014.
 
-_____
+---
 
 <div>
   <slot></slot>

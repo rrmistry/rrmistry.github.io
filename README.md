@@ -9,10 +9,12 @@ The source code for this site is available on GitHub: [rrmistry/rrmistry.github.
 This site uses the following technologies:
 
 - [Svelte 5](https://svelte.dev/)
-    - [mdsvex](https://mdsvex.pngwn.io/)
+  - [mdsvex](https://mdsvex.pngwn.io/)
 - [Tailwind CSS](https://tailwindcss.com/)
-    - [@tailwindcss/typography](https://github.com/tailwindlabs/tailwindcss-typography)
+  - [@tailwindcss/typography](https://github.com/tailwindlabs/tailwindcss-typography)
 - [Devbox](https://github.com/jetify-com/devbox)
 - [Dev Container](https://github.com/devcontainers/features)
 - [GitHub Actions](https://github.com/features/actions)
 - [GitHub Pages](https://pages.github.com/)
+- [svgrepo](https://www.svgrepo.com/)
+- [lucide.dev/icons](https://lucide.dev/icons/)
