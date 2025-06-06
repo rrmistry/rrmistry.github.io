@@ -1,6 +1,8 @@
 import { mdsvex } from "mdsvex";
 import staticAdapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import rehypeExternalLinks from 'rehype-external-links';
+import rehypeMermaid from 'rehype-mermaid';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -11,6 +13,10 @@ const config = {
 	}), mdsvex(
 		{
 			extensions: ['.svx', '.md', '.markdown'],
+			rehypePlugins: [
+				[rehypeExternalLinks, { target: '_blank', rel: 'noopener noreferrer' }],
+				[rehypeMermaid]
+			]
 		}
 	)],
 
