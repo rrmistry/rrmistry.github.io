@@ -107,7 +107,9 @@
 								<Sidebar.MenuButton>
 									{#snippet child({ props })}
 										<a href="/blogs/{post.slug}" {...props} target="_blank">
-											{post.title}
+											<span class="mt-1">
+												{post.title}
+											</span>
 										</a>
 									{/snippet}
 								</Sidebar.MenuButton>
