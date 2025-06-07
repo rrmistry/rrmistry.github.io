@@ -163,14 +163,16 @@ kubectl get pods
 
 # Is really just:
 curl -X GET https://your-cluster/api/v1/namespaces/default/pods
+```
 
+```bash
 # This kubectl command:
 kubectl create deployment nginx --image=nginx
 
-# Is really just:
+# Is really just a REST API call with JSON payload:
 curl -X POST https://your-cluster/apis/apps/v1/namespaces/default/deployments \
   -H "Content-Type: application/json" \
-  -d '{"metadata":{"name":"nginx"},"spec":{"template":{"spec":{"containers":[{"name":"nginx","image":"nginx"}]}}}}'
+  -d '<JSON with metadata.name=nginx and spec.template.spec.containers>'
 ```
 
 Every cloud provider works the same way. The CLIs are just convenience wrappers around REST APIs.
