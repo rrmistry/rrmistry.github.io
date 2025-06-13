@@ -23,7 +23,6 @@
     "scripts": {
       "npm-install": [
         "npm install",
-        "npx playwright install --with-deps",
       ],
       "debug": [
         "npm run dev:debug -- --host=0.0.0.0",
