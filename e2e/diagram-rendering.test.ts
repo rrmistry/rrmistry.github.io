@@ -15,25 +15,25 @@ test.describe('Diagram Rendering', () => {
     // There should be no mermaid code blocks (they should be converted to SVG)
     await expect(mermaidCodeBlocks).toHaveCount(0);
     
-    // There should be at least one mermaid SVG diagram
-    await expect(mermaidSvgs).toHaveCount(1);
+    // There should be at least one mermaid SVG diagram (3 in this blog post)
+    await expect(mermaidSvgs).toHaveCount(3);
     
     // The SVG should contain the expected diagram elements
     const svg = mermaidSvgs.first();
     await expect(svg).toBeVisible();
     
-    // Check for specific elements in the Kubernetes diagram
-    await expect(page.locator('text=Cluster')).toBeVisible();
-    await expect(page.locator('text=Node 1')).toBeVisible();
-    await expect(page.locator('text=Pod 1')).toBeVisible();
+    // Check for specific elements in the mermaid diagrams by looking within SVG
+    await expect(svg.locator('text=User')).toBeVisible();
+    await expect(svg.locator('text=AWS CLI')).toBeVisible();
+    await expect(svg.locator('text=kubectl')).toBeVisible();
   });
   
   test('should adapt mermaid diagram theme to light/dark mode', async ({ page }) => {
     await page.goto('/blogs/kubernetes-intro-for-non-developers');
     await page.waitForLoadState('networkidle');
     
-    // Wait for mermaid diagram to render
-    const diagramContainer = page.locator('.mermaid-chart');
+    // Wait for mermaid diagrams to render
+    const diagramContainer = page.locator('.mermaid-chart').first();
     await expect(diagramContainer).toBeVisible();
     
     // Wait for SVG to appear
@@ -54,7 +54,7 @@ test.describe('Diagram Rendering', () => {
     // Verify the mermaid diagram re-rendered for dark theme
     // The SVG should still be visible and contain the same content
     await expect(svg).toBeVisible();
-    await expect(page.locator('text=Cluster')).toBeVisible();
+    await expect(page.locator('text=User')).toBeVisible();
     
     // Toggle back to light mode
     const darkThemeButton = page.locator('button:has(svg.lucide-moon)');
@@ -65,7 +65,7 @@ test.describe('Diagram Rendering', () => {
     
     // Verify diagram still works in light mode
     await expect(svg).toBeVisible();
-    await expect(page.locator('text=Cluster')).toBeVisible();
+    await expect(page.locator('text=User')).toBeVisible();
   });
   
   test('should handle multiple diagram types', async ({ page }) => {

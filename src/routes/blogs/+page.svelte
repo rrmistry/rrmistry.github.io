@@ -6,6 +6,7 @@
 	import { Badge } from '$lib/components/ui/badge/index.js';
 	import { breadcrumbs } from '@/stores/breadcrumb';
 
+
 	onMount(() => {
 		breadcrumbs.set([
 			{ href: '/', label: 'Home' },

@@ -33,9 +33,13 @@ I am from a heavy C#, ASP.NET, Blazor background and so am used to compiled and 
 
 Svelte felt like the closet match to that paradigm of thinking and framework. That and the excellent video from <a href="https://www.youtube.com/watch?v=rv3Yq-B8qp4" target="_blank">Fireship.io</a> pushed me to try it out.
 
+<div class="flex justify-center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rv3Yq-B8qp4?si=iriWIzZZPxXy2Ckq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
+<div class="text-center">
 <span class="text-xs">I am not affiliated with Fireship.io, just really like his work.</span>
+</div>
 
 ## 2. Using Tailwind instead of Bootstrap
 
@@ -47,9 +51,13 @@ I liked the idea of minimalist and easy to use components that I can own and cus
 
 The core philosophy of shadcn/ui felt just right to me. Again, the excellent video from <a href="https://www.youtube.com/watch?v=TBIjgBVFjVI" target="_blank">Fireship.io</a> pushed me to try it out.
 
+<div class="flex justify-center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TBIjgBVFjVI?si=oqKvTY7_1PP-77WP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
+<div class="text-center">
 <span class="text-xs">I am not affiliated with Fireship.io, just really like his work.</span>
+</div>
 
 ## 4. Using Jetify Devbox
 
@@ -57,19 +65,27 @@ This one is another killer tool that I absolutely live without. It is a full-fle
 
 Previously I used <a href="https://code.visualstudio.com/docs/devcontainers/containers" target="_blank">Docker, VS Code with Dev Containers</a>
 
+<div class="flex justify-center">
 ![Docker, VS Code with Dev Containers Architecture](https://code.visualstudio.com/assets/docs/devcontainers/containers/architecture-containers.png)
+</div>
 
 But it felt really resource heavy for simple minimalist projects like a personal blog. Devbox offers a much more lightweight approach with local host shell sessions. This also means that I can access my local files, databases, etc. without having to solve networking or volume mounting issues.
 
 Also, catching this on the <a href="https://www.youtube.com/watch?v=WiFLtcBvGMU" target="_blank">DevOps Toolkit</a> channel was an excellent find!
 
+<div class="flex justify-center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WiFLtcBvGMU?si=7YGc9OqnXwuub1Vb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
+<div class="text-center">
 <span class="text-xs">I am not affiliated with DevOps Toolkit, just really like his work.</span>
+</div>
 
 Now I go for Devbox first, and only when I have specific use cases for isolation do I go for Dev Containers.
 
-![devbox preview](https://user-images.githubusercontent.com/279789/186491771-6b910175-18ec-4c65-92b0-ed1a91bb15ed.svg)
+<div class="flex justify-center">
+<img src="https://user-images.githubusercontent.com/279789/186491771-6b910175-18ec-4c65-92b0-ed1a91bb15ed.svg" alt="devbox preview" />
+</div>
 
 ---
 
