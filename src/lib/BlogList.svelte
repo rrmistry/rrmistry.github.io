@@ -4,13 +4,17 @@
 	import { Input } from '$lib/components/ui/input/index.ts';
 	import * as Sidebar from '$lib/components/ui/sidebar/index.ts';
 	import type { Snippet } from 'svelte';
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 
 	interface Props {
 		row: Snippet<[Blog]>;
+		initialQuery?: string;
+		initialTag?: string;
 	}
-	let { row, ...restProps }: Props = $props();
+	let { row, initialQuery = '', initialTag = '', ...restProps }: Props = $props();
 
-	let searchTerm = $state('');
+	let searchTerm = $state(initialTag ? `tag:${initialTag}` : initialQuery);
 	let posts = $state([]);
 	let filteredPosts = $state([]);
 
@@ -20,7 +24,12 @@
 	onMount(async () => {
 		const res = await fetch('/api/posts');
 		posts = await res.json();
-		filteredPosts = posts;
+		// Apply initial search if query or tag exists
+		if (initialQuery || initialTag) {
+			search();
+		} else {
+			filteredPosts = posts;
+		}
 	});
 
 	function search() {
@@ -45,6 +54,28 @@
 			} else {
 				filteredPosts = posts;
 			}
+		}
+		
+		// Update URL with current search term
+		if ($page.url.pathname === '/blogs') {
+			const url = new URL($page.url);
+			
+			// Clear both parameters first
+			url.searchParams.delete('q');
+			url.searchParams.delete('tag');
+			
+			if (searchTerm) {
+				if (searchTerm.startsWith('tag:')) {
+					const tagValue = searchTerm.slice(4).trim();
+					if (tagValue) {
+						url.searchParams.set('tag', tagValue);
+					}
+				} else {
+					url.searchParams.set('q', searchTerm);
+				}
+			}
+			
+			goto(url, { replaceState: true, keepFocus: true });
 		}
 	}
 </script>
