@@ -18,5 +18,7 @@ Welcome!
 	<div class="flex justify-center">
 		<span class="text-xs"> My <a href="https://github.com/rrmistry">GitHub</a> activity</span>
 	</div>
-	<img src="https://ghchart.rshah.org/rrmistry" alt="2016rshah's Github chart" />
+	<div class="flex justify-center">
+		<img src="https://ghchart.rshah.org/rrmistry" alt="2016rshah's Github chart" />
+	</div>
 </div>
