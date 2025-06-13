@@ -31,17 +31,11 @@ jobs:
       - name: Install NPM packages
         run: devbox run npm-install
 
-      - name: Install Playwright Browsers
-        run: devbox run -- npx playwright install --with-deps
-
       - name: Sync SvelteKit
         run: devbox run -- npx svelte-kit sync
 
       - name: Run unit tests
         run: devbox run -- npm run test:unit
-
-      - name: Run e2e tests
-        run: devbox run -- npm run test:e2e
 
       - name: build
         env:
@@ -55,8 +49,34 @@ jobs:
           # this should match the `pages` option in your adapter-static options
           path: 'build/'
 
-  deploy:
+  e2e_testing:
     needs: build_site
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: actions/cache@v3
+        id: npm-cache
+        with:
+          path: |
+            node_modules/
+            package-lock.json
+          key: "${{ runner.os }}-${{ runner.arch }}-npm-${{ hashFiles('package-lock.json') }}"
+          restore-keys: |
+            ${{ runner.os }}-${{ runner.arch }}-npm-${{ hashFiles('package-lock.json') }}
+            ${{ runner.os }}-npm-
+
+      - name: Install NPM packages with dev dependencies
+        run: npm install
+
+      - name: Run e2e tests
+        run: npm run test:e2e
+
+  deploy:
+    needs: [build_site, e2e_testing]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
