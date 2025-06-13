@@ -9,12 +9,10 @@
 
 	interface Props {
 		row: Snippet<[Blog]>;
-		initialQuery?: string;
-		initialTag?: string;
 	}
-	let { row, initialQuery = '', initialTag = '', ...restProps }: Props = $props();
+	let { row, ...restProps }: Props = $props();
 
-	let searchTerm = $state(initialTag ? `tag:${initialTag}` : initialQuery);
+	let searchTerm = $state('');
 	let posts = $state([]);
 	let filteredPosts = $state([]);
 
@@ -22,10 +20,19 @@
 	// export let itemComponent: string = 'li';
 
 	onMount(async () => {
+		// Read URL params on client side
+		if (typeof window !== 'undefined') {
+			const urlParams = new URLSearchParams(window.location.search);
+			const query = urlParams.get('q') || '';
+			const tag = urlParams.get('tag') || '';
+			searchTerm = tag ? `tag:${tag}` : query;
+		}
+		
 		const res = await fetch('/api/posts');
 		posts = await res.json();
-		// Apply initial search if query or tag exists
-		if (initialQuery || initialTag) {
+		
+		// Apply initial search if exists
+		if (searchTerm) {
 			search();
 		} else {
 			filteredPosts = posts;

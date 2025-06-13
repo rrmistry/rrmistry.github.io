@@ -6,7 +6,6 @@
 	import { Badge } from '$lib/components/ui/badge/index.js';
 	import { breadcrumbs } from '@/stores/breadcrumb';
 
-	let { data } = $props();
 
 	onMount(() => {
 		breadcrumbs.set([
@@ -23,7 +22,7 @@
 
 <h1><a href="/blogs/">Blog Posts</a></h1>
 
-<BlogList initialQuery={data.query} initialTag={data.tag}>
+<BlogList>
 	{#snippet row(post: Blog)}
 		<Table.Row>
 			<Table.Cell class="font-medium">
