@@ -73,7 +73,7 @@
 							<Sidebar.MenuItem>
 								<Sidebar.MenuButton>
 									{#snippet child({ props })}
-										<a href={item.url} {...props}>
+										<a href={item.url} data-sveltekit-reload {...props}>
 											{#if item.icon}
 												<item.icon />
 											{/if}
@@ -94,7 +94,7 @@
 					<Sidebar.MenuItem>
 						<Sidebar.MenuButton>
 							{#snippet child({ props })}
-								<a href="/blogs" {...props}>
+								<a href="/blogs" data-sveltekit-reload {...props}>
 									<BlogIcon />
 									<span>Blogs</span>
 								</a>
@@ -106,7 +106,7 @@
 							<Sidebar.MenuItem>
 								<Sidebar.MenuButton>
 									{#snippet child({ props })}
-										<a href="/blogs/{post.slug}" {...props} target="_blank">
+										<a href="/blogs/{post.slug}" data-sveltekit-reload {...props}>
 											<span class="mt-1">
 												{post.title}
 											</span>
