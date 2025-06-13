@@ -3,6 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: 'main'
+  workflow_dispatch:
 
 jobs:
   build_site:
@@ -29,6 +30,12 @@ jobs:
 
       - name: Install NPM packages
         run: devbox run npm-install
+
+      - name: Run unit tests
+        run: devbox run -- npm run test:unit
+
+      - name: Run e2e tests
+        run: devbox run -- npm run test:e2e
 
       - name: build
         env:
