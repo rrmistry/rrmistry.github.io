@@ -1,4 +1,4 @@
-Welcome!
+<h1>Welcome!</h1>
 
 <p>
 	I don't blog often, but when I do, it's because I've found or created something that I think is
