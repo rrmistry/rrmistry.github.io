@@ -426,6 +426,54 @@
         }
       }
     },
+    "playwright@latest": {
+      "last_modified": "2025-05-16T20:19:48Z",
+      "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#playwright",
+      "source": "devbox-search",
+      "version": "1.52.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/86qikjqa195jakbx8kvwxsssfjv5v4i6-playwright-core-1.52.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/86qikjqa195jakbx8kvwxsssfjv5v4i6-playwright-core-1.52.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/r3alacd517rb8s9m9jq11h457wi8hmwq-playwright-core-1.52.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/r3alacd517rb8s9m9jq11h457wi8hmwq-playwright-core-1.52.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/all66pd8mkrcf674nxq6vs5nzmxllsmi-playwright-core-1.52.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/all66pd8mkrcf674nxq6vs5nzmxllsmi-playwright-core-1.52.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/x5p6gbs9p8p49idl799inlin40zzw89h-playwright-core-1.52.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/x5p6gbs9p8p49idl799inlin40zzw89h-playwright-core-1.52.0"
+        }
+      }
+    },
     "tailwindcss@latest": {
       "last_modified": "2025-05-16T20:19:48Z",
       "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#tailwindcss",
