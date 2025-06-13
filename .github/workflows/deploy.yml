@@ -31,6 +31,9 @@ jobs:
       - name: Install NPM packages
         run: devbox run npm-install
 
+      - name: Sync SvelteKit
+        run: devbox run -- npx svelte-kit sync
+
       - name: Run unit tests
         run: devbox run -- npm run test:unit
 
