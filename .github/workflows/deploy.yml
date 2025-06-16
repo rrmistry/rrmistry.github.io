@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build_site:
+  build_and_test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -31,6 +31,9 @@ jobs:
       - name: Install NPM packages
         run: devbox run npm-install
 
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
       - name: Sync SvelteKit
         run: devbox run -- npx svelte-kit sync
 
@@ -43,43 +46,17 @@ jobs:
         run: |
           devbox run -- npm run build
 
+      - name: Run e2e tests
+        run: devbox run -- npm run test:e2e
+
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
           # this should match the `pages` option in your adapter-static options
           path: 'build/'
 
-  e2e_testing:
-    needs: build_site
-    runs-on: ubuntu-latest
-    container:
-      image: mcr.microsoft.com/playwright:v1.50.1-jammy
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - uses: actions/cache@v3
-        id: npm-cache
-        with:
-          path: |
-            node_modules/
-            package-lock.json
-          key: "${{ runner.os }}-${{ runner.arch }}-npm-${{ hashFiles('package-lock.json') }}"
-          restore-keys: |
-            ${{ runner.os }}-${{ runner.arch }}-npm-${{ hashFiles('package-lock.json') }}
-            ${{ runner.os }}-npm-
-
-      - name: Install Playwright with browsers
-        run: npx playwright install --with-deps chromium
-
-      - name: Install NPM packages with dev dependencies
-        run: npm install
-
-      - name: Run e2e tests
-        run: npm run test:e2e
-
   deploy:
-    needs: [build_site, e2e_testing]
+    needs: build_and_test
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
