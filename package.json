@@ -3,8 +3,8 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"dev": "node --inspect ./node_modules/.bin/vite dev --host=0.0.0.0",
-		"dev:no-debug": "vite dev --host=0.0.0.0",
+		"dev": "vite dev --host=0.0.0.0",
+		"dev:debug": "node --inspect ./node_modules/.bin/vite dev --host=0.0.0.0",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",

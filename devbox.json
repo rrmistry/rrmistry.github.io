@@ -7,7 +7,9 @@
     "git@latest",
     "bash-completion@latest",
     "tailwindcss@latest",
-    "killport@latest"
+    "killport@latest",
+    "playwright@latest",
+    "act@latest",
   ],
   "include":     [],
   "description": "DevBox with standard tools and packages easily installed",
@@ -18,13 +20,23 @@
   "shell": {
     "init_hook": [
       "echo 'Welcome! See README.md for tips on contributing to this repo.'",
+      "echo '🔧 Setting up git hooks...'",
+      "git config core.hooksPath .git-hooks",
+      "echo '✅ Git hooks configured!'",
     ],
     "scripts": {
       "npm-install": [
         "npm install",
       ],
-      "debug": [
-        "npm run dev:debug -- --host=0.0.0.0",
+      "dev": [
+        "npm run dev",
+      ],
+      "ci-local": [
+        "mkdir -p ~/.act/cache ~/.act/cache-server",
+        "act push --job build_and_test --action-cache-path ~/.act/cache --use-new-action-cache --cache-server-path ~/.act/cache-server --cache-server-port 0",
+      ],
+      "ci-local-simple": [
+        "act push --job build_and_test --container-architecture linux/amd64",
       ],
     },
   },

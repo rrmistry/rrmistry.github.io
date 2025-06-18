@@ -3,6 +3,13 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import path from 'path';
 
 export default defineConfig({
+	server: {
+		port: 5173
+	},
+	preview: {
+		port: 5173
+	},
+
 	plugins: [sveltekit()],
 
 	resolve: {
