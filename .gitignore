@@ -1,4 +1,8 @@
+# Test results
 test-results
+playwright-report
+
+# Node
 node_modules
 
 # Output
@@ -16,6 +20,9 @@ Thumbs.db
 .env.*
 !.env.example
 !.env.test
+
+# Secrets
+.secrets
 
 # Vite
 vite.config.js.timestamp-*
