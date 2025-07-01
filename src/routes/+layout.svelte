@@ -20,7 +20,7 @@
 	<Sidebar.Inset>
 		<main>
 			<header
-				class="no-print flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12"
+				class="no-print fixed top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 border-b"
 			>
 				<div class="flex items-center gap-2 px-4">
 					<Sidebar.Trigger class="-ml-1" />
@@ -39,7 +39,7 @@
 					</Breadcrumb.Root>
 				</div>
 			</header>
-			<div class="flex flex-1 flex-col gap-4 p-4 pt-0">
+			<div class="flex flex-1 flex-col gap-4 p-4 pt-20">
 				<div class="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min">
 					<article
 						class="element-to-print prose m-8 max-w-none justify-self-center dark:prose-invert"

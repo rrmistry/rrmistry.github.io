@@ -18,3 +18,5 @@ This site uses the following technologies:
 - [GitHub Pages](https://pages.github.com/)
 - [svgrepo](https://www.svgrepo.com/)
 - [lucide.dev/icons](https://lucide.dev/icons/)
+- [Umami Analytics](https://umami.is/) (privacy-friendly web analytics)
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI development assistant)

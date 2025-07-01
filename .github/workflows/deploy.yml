@@ -42,7 +42,7 @@ jobs:
           path: 'build/'
 
       - name: Run Playwright tests
-        run: npx playwright test
+        run: npm run test:e2e
 
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() && !env.ACT }}

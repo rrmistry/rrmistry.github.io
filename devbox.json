@@ -1,21 +1,27 @@
 {
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.4/.schema/devbox.schema.json",
   "packages": [
-    "nodejs@20",
-    "bash@latest",
+    "nodejs@22",
     "neovim@latest",
     "git@latest",
-    "bash-completion@latest",
     "tailwindcss@latest",
     "killport@latest",
     "playwright@latest",
     "act@latest",
+    "tmux@latest",
+    "tmuxinator@latest",
+    "neovim@latest",
+    "ripgrep@latest",
+    "fzf@latest",
+    "fd@latest",
+    "lazygit@latest",
+    "claude-code@latest",
   ],
-  "include":     [],
+  "include": [],
   "description": "DevBox with standard tools and packages easily installed",
   "env": {
     "PROMPT_COMMAND": "echo -e \"\\nCurrent Directory: $(pwd)\"",
-    "PS1":            "📦 devbox> ",
+    "PS1": "📦 devbox> ",
   },
   "shell": {
     "init_hook": [
@@ -28,14 +34,20 @@
       "npm-install": [
         "npm install",
       ],
+      "tmux": [
+        "tmuxinator start rrmistry-github-io -p $PWD/.tmuxinator.yml",
+      ],
+      "tmux:stop": [
+        "tmuxinator stop rrmistry-github-io -p $PWD/.tmuxinator.yml",
+      ],
       "dev": [
         "npm run dev",
       ],
-      "ci-local": [
+      "ci:local": [
         "mkdir -p ~/.act/cache ~/.act/cache-server",
         "act push --job build_and_test --action-cache-path ~/.act/cache --use-new-action-cache --cache-server-path ~/.act/cache-server --cache-server-port 0",
       ],
-      "ci-local-simple": [
+      "ci:local-simple": [
         "act push --job build_and_test --container-architecture linux/amd64",
       ],
     },
