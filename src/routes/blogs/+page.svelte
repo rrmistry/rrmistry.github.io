@@ -3,7 +3,7 @@
 	import type { Blog } from '$lib/blog';
 	import BlogList from '$lib/BlogList.svelte';
 	import * as Table from '$lib/components/ui/table/index.js';
-	import { Badge } from '$lib/components/ui/badge/index.js';
+	import TagBadge from '$lib/components/TagBadge.svelte';
 	import { breadcrumbs } from '@/stores/breadcrumb';
 
 
@@ -31,7 +31,7 @@
 			<Table.Cell>{post.description}</Table.Cell>
 			<Table.Cell class="text-right">
 				{#each post.tags as tag}
-					<Badge class="mr-1">#{tag}</Badge>
+					<TagBadge {tag} class="mr-1" />
 				{/each}
 			</Table.Cell>
 			<Table.Cell class="text-right"

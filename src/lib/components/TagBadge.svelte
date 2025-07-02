@@ -20,7 +20,7 @@
 
 	function handleClick(e: MouseEvent) {
 		e.preventDefault();
-		goto(`/blogs?tag=${encodeURIComponent(tag)}`);
+		window.location.href = `/blogs?tag=${encodeURIComponent(tag)}`;
 	}
 </script>
 

@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	const { post: Post, metadata } = data;
-	import { Badge } from '$lib/components/ui/badge/index.js';
+	import TagBadge from '$lib/components/TagBadge.svelte';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
 	import { breadcrumbs } from '@/stores/breadcrumb';
 
@@ -27,7 +27,7 @@
 <div class="flex justify-between text-sm">
 	<div class="flex gap-2">
 		Tags: {#each metadata.tags as tag}
-			<Badge class="mr-1">#{tag}</Badge>
+			<TagBadge {tag} class="mr-1" />
 		{/each}
 	</div>
 	<div>
