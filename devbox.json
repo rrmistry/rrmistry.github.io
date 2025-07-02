@@ -44,11 +44,7 @@
         "npm run dev",
       ],
       "ci:local": [
-        "mkdir -p ~/.act/cache ~/.act/cache-server",
-        "act push --job build_and_test --action-cache-path ~/.act/cache --use-new-action-cache --cache-server-path ~/.act/cache-server --cache-server-port 0",
-      ],
-      "ci:local-simple": [
-        "act push --job build_and_test --container-architecture linux/amd64",
+        "act push --job build_and_test --secret-file .secrets",
       ],
     },
   },
