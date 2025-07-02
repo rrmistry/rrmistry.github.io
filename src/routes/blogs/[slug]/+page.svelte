@@ -1,16 +1,18 @@
 <script lang="ts">
 	export let data;
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
 	const { post: Post, metadata } = data;
 	import { Badge } from '$lib/components/ui/badge/index.js';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
 	import { breadcrumbs } from '@/stores/breadcrumb';
 
 	onMount(() => {
+		const slug = $page.params.slug;
 		breadcrumbs.set([
 			{ href: '/', label: 'Home' },
 			{ href: '/blogs', label: 'Blogs' },
-			{ href: `/blogs/${metadata.slug}`, label: metadata.title }
+			{ href: `/blogs/${slug}`, label: metadata.title }
 		]);
 
 		return () => {
