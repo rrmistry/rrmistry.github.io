@@ -9,23 +9,23 @@ test.describe('Breadcrumb Navigation', () => {
 		const breadcrumbNav = page.locator('nav[aria-label="breadcrumb"]');
 		await expect(breadcrumbNav).toBeVisible();
 		
-		// Check that all breadcrumb items are present
+		// Check that all breadcrumb items are present (including separators: 3 items + 2 separators = 5)
 		const breadcrumbItems = breadcrumbNav.locator('ol > li');
-		await expect(breadcrumbItems).toHaveCount(3);
+		await expect(breadcrumbItems).toHaveCount(5);
 		
-		// Check Home breadcrumb
+		// Check Home breadcrumb (item 0)
 		const homeBreadcrumb = breadcrumbItems.nth(0).locator('a');
 		await expect(homeBreadcrumb).toHaveText('Home');
 		await expect(homeBreadcrumb).toHaveAttribute('href', '/');
 		
-		// Check Blogs breadcrumb
-		const blogsBreadcrumb = breadcrumbItems.nth(1).locator('a');
+		// Check Blogs breadcrumb (item 2, skipping separator at 1)
+		const blogsBreadcrumb = breadcrumbItems.nth(2).locator('a');
 		await expect(blogsBreadcrumb).toHaveText('Blogs');
 		await expect(blogsBreadcrumb).toHaveAttribute('href', '/blogs');
 		
-		// Check current page breadcrumb (should not be a link)
-		const currentBreadcrumb = breadcrumbItems.nth(2);
-		await expect(currentBreadcrumb).toContainText('Kubernetes Intro for Non-Developers');
+		// Check current page breadcrumb (item 4, skipping separator at 3)
+		const currentBreadcrumb = breadcrumbItems.nth(4);
+		await expect(currentBreadcrumb).toContainText('Kubernetes for Non-Developers: What They Don\'t Tell You');
 		// Current page should not have a link
 		await expect(currentBreadcrumb.locator('a')).toHaveCount(0);
 	});
@@ -47,9 +47,9 @@ test.describe('Breadcrumb Navigation', () => {
 		// Navigate to first blog post
 		await page.goto('/blogs/kubernetes-intro-for-non-developers');
 		
-		// Check the current breadcrumb
-		let currentBreadcrumb = page.locator('nav[aria-label="breadcrumb"] ol > li').nth(2);
-		await expect(currentBreadcrumb).toContainText('Kubernetes Intro for Non-Developers');
+		// Check the current breadcrumb (item 4, accounting for separators)
+		let currentBreadcrumb = page.locator('nav[aria-label="breadcrumb"] ol > li').nth(4);
+		await expect(currentBreadcrumb).toContainText('Kubernetes for Non-Developers: What They Don\'t Tell You');
 		
 		// Navigate to blogs list
 		await page.goto('/blogs');
@@ -65,10 +65,10 @@ test.describe('Breadcrumb Navigation', () => {
 			// Wait for navigation
 			await page.waitForURL(/\/blogs\/[^/]+$/);
 			
-			// Check that breadcrumb updated
-			currentBreadcrumb = page.locator('nav[aria-label="breadcrumb"] ol > li').nth(2);
+			// Check that breadcrumb updated (item 4, accounting for separators)
+			currentBreadcrumb = page.locator('nav[aria-label="breadcrumb"] ol > li').nth(4);
 			const breadcrumbText = await currentBreadcrumb.textContent();
-			expect(breadcrumbText).not.toBe('Kubernetes Intro for Non-Developers');
+			expect(breadcrumbText).not.toBe('Kubernetes for Non-Developers: What They Don\'t Tell You');
 		}
 	});
 

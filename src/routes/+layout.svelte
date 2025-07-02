@@ -29,7 +29,11 @@
 						<Breadcrumb.List>
 							{#each $breadcrumbs as crumb, i}
 								<Breadcrumb.Item class="text-sm md:text-base">
-									<Breadcrumb.Link href={crumb.href}>{crumb.label}</Breadcrumb.Link>
+									{#if i === $breadcrumbs.length - 1}
+										<Breadcrumb.Page>{crumb.label}</Breadcrumb.Page>
+									{:else}
+										<Breadcrumb.Link href={crumb.href}>{crumb.label}</Breadcrumb.Link>
+									{/if}
 								</Breadcrumb.Item>
 								{#if i < $breadcrumbs.length - 1}
 									<Breadcrumb.Separator class="mx-1 md:mx-2" />
