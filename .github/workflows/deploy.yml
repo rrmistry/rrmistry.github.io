@@ -54,6 +54,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          apt-get update
+          apt-get install -y gh
           if [ -z "$ACT" ]; then
             PAGES_URL=$(gh api "repos/${{ github.repository }}/pages" --jq '.html_url')
             echo "PAGES_URL=$PAGES_URL" >> "$GITHUB_OUTPUT"
