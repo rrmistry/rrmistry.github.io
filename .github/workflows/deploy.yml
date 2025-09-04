@@ -83,8 +83,19 @@ jobs:
             sleep 5
           done
           
-          # Kill the server
+          # Kill the server and wait for it to stop
+          echo "Stopping dev server..."
           kill $SERVER_PID || true
+          
+          # Wait for the port to be free
+          for i in $(seq 1 10); do
+            if ! curl -s http://localhost:$DEV_SERVER_PORT/ > /dev/null 2>&1; then
+              echo "Server stopped successfully"
+              break
+            fi
+            echo "Waiting for server to stop... attempt $i/10"
+            sleep 1
+          done
         working-directory: .
 
       - name: Replace sitemap.xml domain
