@@ -22,6 +22,12 @@
 	});
 </script>
 
+<svelte:head>
+	<title>{metadata.title}</title>
+	<meta name="description" content={metadata.description} />
+	<link rel="canonical" href={`${$page.url.origin}/blogs/${$page.params.slug}`} />
+</svelte:head>
+
 <h1>{metadata.title}</h1>
 
 <div class="flex justify-between text-sm">

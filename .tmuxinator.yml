@@ -24,7 +24,7 @@ root: <%= ENV["PWD"] || "." %>
 # pre_window: rbenv shell 2.0.0-p247
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
-# tmux_options: -f ~/.tmux.mac.conf
+tmux_options: -f <%= ENV["PWD"] %>/.tmux.conf
 
 # Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
 # tmux_command: byobu
@@ -41,16 +41,17 @@ startup_window: claude
 windows:
   - claude:
       panes:
-        - claude --continue
+        - |
+          echo "You can run Claude with: claude --continue"
   - lazygit:
       panes:
         - lazygit
   - nvim:
       panes:
         - nvim .
-  - htop:
-      panes:
-        - htop
+  # - htop:
+  #     panes:
+  #       - htop
   - terminal:
       panes:
-        -  # Empty pane for general terminal use
+        - # Empty pane for general terminal use
