@@ -35,6 +35,35 @@ jobs:
           BASE_PATH: '/'
         run: npm run build
 
+      - name: Start SvelteKit dev server
+        run: npm run dev -- --port 5173 &
+        working-directory: .
+
+      - name: Download sitemap.xml
+        run: |
+          for i in $(seq 1 10); do
+            curl http://localhost:5173/sitemap.xml -o build/sitemap.xml && break
+            sleep 5
+          done
+
+      - name: Replace sitemap.xml domain
+        run: sed -i 's|http://localhost:5173|${{ steps.get_pages_url.outputs.PAGES_URL }}|g' build/sitemap.xml
+
+      - name: Get GitHub Pages URL
+        id: get_pages_url
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -z "$ACT" ]; then
+            PAGES_URL=$(gh api "repos/${{ github.repository }}/pages" --jq '.html_url')
+            echo "PAGES_URL=$PAGES_URL" >> "$GITHUB_OUTPUT"
+          else
+            echo "PAGES_URL=rrmistry.ca" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generate SEO files
+        run: node scripts/generate-seo-files.mjs ${{ steps.get_pages_url.outputs.PAGES_URL }}
+
       - name: Upload Artifacts
         if: ${{ !env.ACT }} # skip during local actions testing
         uses: actions/upload-pages-artifact@v3

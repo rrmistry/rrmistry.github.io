@@ -58,10 +58,9 @@ test.describe('Breadcrumb Navigation', () => {
 		const blogLinks = page.locator('a[href^="/blogs/"]:not([href="/blogs/"])');
 		const blogCount = await blogLinks.count();
 		
-		if (blogCount > 1) {
-			// Click on the second blog post
-			await blogLinks.nth(1).click();
-			
+		      if (blogCount > 1) {
+		        // Click on a different blog post
+		        await page.click('a[href="/blogs/hello-world-svelte5-shadcn"]');			
 			// Wait for navigation
 			await page.waitForURL(/\/blogs\/[^/]+$/);
 			
