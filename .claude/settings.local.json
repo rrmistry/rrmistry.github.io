@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash",
+      "Delete",
+      "Edit",
+      "mcp__browser-tools",
+      "mcp__sequential-thinking",
+      "MultiEdit",
+      "Update",
+      "WebFetch",
+      "WebSearch"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -6,11 +6,33 @@ on:
   workflow_dispatch:
 
 jobs:
+  get_pages_url_job:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      pages_url: ${{ steps.get_url.outputs.PAGES_URL }}
+    steps:
+      - name: Get GitHub Pages URL
+        id: get_url
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -z "$ACT" ]; then
+            PAGES_URL=$(gh api "repos/${{ github.repository }}/pages" --jq '.html_url')
+            echo "PAGES_URL=$PAGES_URL" >> "$GITHUB_OUTPUT"
+          else
+            echo "PAGES_URL=rrmistry.ca" >> "$GITHUB_OUTPUT"
+          fi
+
   build_and_test:
+    needs: [get_pages_url_job]
     runs-on: ubuntu-latest
     container:
       image: mcr.microsoft.com/playwright:v1.50.1-noble
       options: --user 1001
+    env:
+      DEV_SERVER_PORT: 5173
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,36 +57,41 @@ jobs:
           BASE_PATH: '/'
         run: npm run build
 
-      - name: Start SvelteKit dev server
-        run: npm run dev -- --port 5173 &
-        working-directory: .
-
-      - name: Download sitemap.xml
+      - name: Start SvelteKit dev server and download sitemap.xml
         run: |
+          # Start dev server in background
+          npm run dev -- --port $DEV_SERVER_PORT &
+          SERVER_PID=$!
+          
+          # Wait for server to be ready
+          for i in $(seq 1 30); do
+            if curl -s http://localhost:$DEV_SERVER_PORT/ > /dev/null; then
+              echo "Server is ready!"
+              break
+            fi
+            echo "Waiting for server to start... attempt $i/30"
+            sleep 2
+          done
+          
+          # Download sitemap.xml
           for i in $(seq 1 10); do
-            curl http://localhost:5173/sitemap.xml -o build/sitemap.xml && break
+            if curl http://localhost:$DEV_SERVER_PORT/sitemap.xml -o build/sitemap.xml; then
+              echo "Successfully downloaded sitemap.xml"
+              break
+            fi
+            echo "Attempt $i failed, waiting..."
             sleep 5
           done
+          
+          # Kill the server
+          kill $SERVER_PID || true
+        working-directory: .
 
       - name: Replace sitemap.xml domain
-        run: sed -i 's|http://localhost:5173|${{ steps.get_pages_url.outputs.PAGES_URL }}|g' build/sitemap.xml
-
-      - name: Get GitHub Pages URL
-        id: get_pages_url
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y gh
-          if [ -z "$ACT" ]; then
-            PAGES_URL=$(gh api "repos/${{ github.repository }}/pages" --jq '.html_url')
-            echo "PAGES_URL=$PAGES_URL" >> "$GITHUB_OUTPUT"
-          else
-            echo "PAGES_URL=rrmistry.ca" >> "$GITHUB_OUTPUT"
-          fi
+        run: sed -i 's|http://localhost:${{ env.DEV_SERVER_PORT }}|${{ needs.get_pages_url_job.outputs.pages_url }}|g' build/sitemap.xml
 
       - name: Generate SEO files
-        run: node scripts/generate-seo-files.mjs ${{ steps.get_pages_url.outputs.PAGES_URL }}
+        run: node scripts/generate-seo-files.mjs ${{ needs.get_pages_url_job.outputs.pages_url }}
 
       - name: Upload Artifacts
         if: ${{ !env.ACT }} # skip during local actions testing
