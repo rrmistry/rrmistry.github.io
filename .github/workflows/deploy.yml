@@ -32,7 +32,7 @@ jobs:
       image: mcr.microsoft.com/playwright:v1.50.1-noble
       options: --user 1001
     env:
-      DEV_SERVER_PORT: 5173
+      DEV_SERVER_PORT: 8080
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -62,7 +62,7 @@ jobs:
           # Start dev server in background
           npm run dev -- --port $DEV_SERVER_PORT &
           SERVER_PID=$!
-          
+
           # Wait for server to be ready
           for i in $(seq 1 30); do
             if curl -s http://localhost:$DEV_SERVER_PORT/ > /dev/null; then
@@ -72,7 +72,7 @@ jobs:
             echo "Waiting for server to start... attempt $i/30"
             sleep 2
           done
-          
+
           # Download sitemap.xml
           for i in $(seq 1 10); do
             if curl http://localhost:$DEV_SERVER_PORT/sitemap.xml -o build/sitemap.xml; then
@@ -82,11 +82,11 @@ jobs:
             echo "Attempt $i failed, waiting..."
             sleep 5
           done
-          
+
           # Kill the server and wait for it to stop
           echo "Stopping dev server..."
           kill $SERVER_PID || true
-          
+
           # Wait for the port to be free
           for i in $(seq 1 10); do
             if ! curl -s http://localhost:$DEV_SERVER_PORT/ > /dev/null 2>&1; then
