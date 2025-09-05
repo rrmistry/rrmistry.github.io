@@ -1,7 +1,7 @@
 ---
 title: 'Hello World with Svelte 5 and shadcn/ui'
 date: 2023-10-01
-tags: ['blog', 'svelte', 'shadcn']
+tags: ['blog', 'svelte', 'shadcn', 'tailwind', 'github-actions', 'devbox']
 description: My first blog post
 ---
 
