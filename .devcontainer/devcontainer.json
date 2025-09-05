@@ -19,10 +19,12 @@
     "remoteUser": "node",
     // Features to add to the dev container. More info: https://containers.dev/features.
     "features": {
-        // "ghcr.io/devcontainers/features/github-cli:1": {
-        //     "installDirectlyFromGitHubRelease": true,
-        //     "version": "latest"
-        // }
+        "ghcr.io/righteouslabs/devcontainer-jetify-devbox/jetify-devbox:latest": {
+            "autoUpdate": true
+        },
+        "ghcr.io/devcontainers/features/sshd:1": {
+            "version": "latest"
+        }
     },
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     "forwardPorts": [
