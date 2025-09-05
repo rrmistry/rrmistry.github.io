@@ -2,17 +2,17 @@
 import fs from 'fs';
 import svgToIco from 'svg-to-ico';
 
-const domain = process.argv[2];
+const page_url = process.argv[2];
 
-if (!domain) {
-  console.error('Please provide a domain as an argument.');
+if (!page_url) {
+  console.error('Please provide a page_url as an argument.');
   process.exit(1);
 }
 
 // Generate robots.txt
 const robotsTxt = `User-Agent: *
 Allow: /
-Sitemap: https://${domain}/sitemap.xml
+Sitemap: ${page_url}/sitemap.xml
 `;
 
 fs.writeFile('build/robots.txt', robotsTxt, 'utf8', (err) => {
