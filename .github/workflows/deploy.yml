@@ -99,7 +99,11 @@ jobs:
         working-directory: .
 
       - name: Replace sitemap.xml domain
-        run: sed -i 's|http://localhost:${{ env.DEV_SERVER_PORT }}|${{ needs.get_pages_url_job.outputs.pages_url }}|g' build/sitemap.xml
+        run: |
+          # Right-trim trailing slash from pages_url if it exists
+          PAGES_URL="${{ needs.get_pages_url_job.outputs.pages_url }}"
+          PAGES_URL="${PAGES_URL%/}"  # Remove trailing slash if present
+          sed -i "s|http://localhost:${{ env.DEV_SERVER_PORT }}|${PAGES_URL}|g" build/sitemap.xml
 
       - name: Generate SEO files
         run: node scripts/generate-seo-files.mjs ${{ needs.get_pages_url_job.outputs.pages_url }}
