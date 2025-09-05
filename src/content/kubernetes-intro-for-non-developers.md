@@ -1,8 +1,18 @@
 ---
 title: "Kubernetes for Non-Developers: What They Don't Tell You"
 date: 2025-01-06
-description: "After 8 years of building apps with Kubernetes, here's what most tutorials won't tell you: it's just cloud computing with different names. Let me show you the patterns they share."
-tags: ['kubernetes', 'devops', 'cloud', 'technology', 'tutorial']
+description: "After 8 years of building apps with Kubernetes, here's what most tutorials won't tell you: it's just cloud computing with different names. Let me show you the patterns they share"
+tags:
+  [
+    'aws-vs-kubernetes',
+    'cloud-patterns',
+    'cloud',
+    'container-orchestration',
+    'devops',
+    'kubernetes',
+    'technology',
+    'tutorial'
+  ]
 ---
 
 <script>

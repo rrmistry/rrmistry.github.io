@@ -1,8 +1,20 @@
 ---
-title: 'My Remote First Workflow'
-date: 2025-01-15
-description: 'Essential tools every Kubernetes developer needs, ranked by daily usage frequency'
-tags: ['tmux', 'llm', 'ssh', 'nvim', 'devbox']
+title: 'Terminal-First Remote Development: My Complete Workflow with SSH, tmux, and Neovim'
+date: 2025-09-05
+description: 'Complete remote development workflow using terminal-first tools: SSH, tmux, Neovim, and Claude Code. From Windows GUI to Linux command-line productivity'
+tags:
+  [
+    'cli-tools',
+    'devbox',
+    'developer-productivity',
+    'llm',
+    'nvim',
+    'productivity-tools',
+    'remote-development',
+    'ssh',
+    'terminal-workflow',
+    'tmux'
+  ]
 ---
 
 # A Shift in Perspective 🧐
@@ -14,7 +26,10 @@ Now, in the era of LLMs and AI, I have found an appreciation for seeing the worl
 <div class="flex justify-center">
 <img src="/images/terminal.png" alt="Linux terminal showing command line interface" />
 </div>
-<p class="text-xs text-center text-gray-500 mt-1">Terminal screenshot from <a href="https://commons.wikimedia.org/wiki/File:Linux_command-line._Bash._GNOME_Terminal._screenshot.png" target="_blank">Wikimedia Commons</a></p>
+
+<div class="text-center">
+<span class="text-xs">Terminal screenshot from <a href="https://commons.wikimedia.org/wiki/File:Linux_command-line._Bash._GNOME_Terminal._screenshot.png" target="_blank">Wikimedia Commons</a></span>
+</div>
 
 This perspective shift combined with heavy use of LLMs has made me rethink my entire workflow.
 
@@ -25,10 +40,25 @@ This perspective shift combined with heavy use of LLMs has made me rethink my en
 Here are the essential tools I use on a daily basis, ranked by frequency of use:
 
 1. [**My very first laptop ❤️**](https://web.archive.org/web/20101021060741/http://asusu35jca1.com/): Though I have newer laptops, I still use and repurpose my old 2010 Asus laptop, model U35JC-A1 (13.3"), now running a no-GUI server-only Debian 12 linux distribution. I choose Debian is a low resource OS that allows me to focus on the terminal and text-based workflows, and is supported by a wide range of tools and packages. It is also a great way to learn linux and the command line.
-   <div class="flex justify-center">
-   	<img src="https://web.archive.org/web/20240521114542im_/http://ecx.images-amazon.com/images/I/51sHtAnAmUL._AA300_.jpg" alt="Asus U35JC-A1 laptop" class="my-4"/>
+   <div class="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 my-8">
+      <div class="text-center">
+         <div class="bg-white p-4 rounded-lg shadow-lg inline-block">
+            <img src="https://web.archive.org/web/20240521114542im_/http://ecx.images-amazon.com/images/I/51sHtAnAmUL._AA300_.jpg" alt="Asus U35JC-A1 laptop" class="w-64 h-auto rounded"/>
+         </div>
+      </div>
+      <div class="text-center">
+         <div class="flex flex-col items-center justify-center h-full">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Debian-OpenLogo.svg" alt="Debian logo" class="w-32 h-auto"/>
+         </div>
+         <p>
+            <span class="text-xs mt-3 block">Debian logo from <a href="https://commons.wikimedia.org/wiki/File:Debian-OpenLogo.svg" target="_blank" class="underline">Wikimedia Commons</a> (CC BY-SA 3.0)</span>
+         </p>
+         <p>
+            <span class="text-xs mt-3 block">Laptop screenshot from <a href="https://web.archive.org/web/20101021060741/http://asusu35jca1.com/" target="_blank" class="underline">Internet Archive</a></span>
+         </p>
+      </div>
    </div>
-   <p class="text-xs text-center text-gray-500 mt-1">Laptop screenshot from <a href="https://web.archive.org/web/20101021060741/http://asusu35jca1.com/" target="_blank">Internet Archive</a></p>
+
    You do not need a fancy laptop (or an old laptop) to get started. Any laptop will do. I would recommend at least 8GB of RAM and a decent CPU. SSD is a must.
 
    On this laptop, I run a few essential tools that help me stay productive:

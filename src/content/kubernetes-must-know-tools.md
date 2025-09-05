@@ -1,8 +1,20 @@
 ---
 title: 'Kubernetes Must Know Tools'
 date: 2025-01-15
-description: 'Essential tools every Kubernetes developer needs, ranked by daily usage frequency'
-tags: ['kubernetes', 'devops', 'cloud', 'technology', 'tutorial']
+description: 'Essential Kubernetes tools ranked by daily usage: kubectl, K9s, Helm, Lens, and more'
+tags:
+  [
+    'cloud',
+    'container-management',
+    'devops-tools',
+    'devops',
+    'helm',
+    'k9s',
+    'kubectl',
+    'kubernetes',
+    'technology',
+    'tutorial'
+  ]
 ---
 
 <script>

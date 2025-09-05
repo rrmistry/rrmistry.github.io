@@ -1,8 +1,20 @@
 ---
-title: 'Hello World with Svelte 5 and shadcn/ui'
+title: 'Building a Modern Blog with Svelte 5, shadcn/ui, and Tailwind CSS'
 date: 2023-10-01
-tags: ['blog', 'svelte', 'shadcn', 'tailwind', 'github-actions', 'devbox']
-description: My first blog post
+description: 'Complete guide to building a modern blog using Svelte 5, shadcn/ui components, Tailwind CSS, and Devbox. Learn why I chose these technologies over React and Bootstrap.'
+tags:
+  [
+    'blog',
+    'component-library',
+    'devbox',
+    'frontend-development',
+    'github-actions',
+    'modern-web-stack',
+    'shadcn',
+    'svelte',
+    'svelte5',
+    'tailwindcss'
+  ]
 ---
 
 # Welcome to my blog!
