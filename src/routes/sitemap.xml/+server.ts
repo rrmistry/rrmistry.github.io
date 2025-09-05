@@ -1,4 +1,3 @@
-
 import { json } from '@sveltejs/kit';
 
 export async function GET({ url }) {
@@ -27,22 +26,17 @@ export async function GET({ url }) {
 >
   <url>
     <loc>${url.origin}</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>${url.origin}/about</loc>
-    <changefreq>daily</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>${url.origin}/blogs</loc>
-    <changefreq>daily</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>${url.origin}/resume</loc>
-    <changefreq>daily</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   ${posts
@@ -61,4 +55,3 @@ export async function GET({ url }) {
 
 	return new Response(sitemap, { headers });
 }
-
