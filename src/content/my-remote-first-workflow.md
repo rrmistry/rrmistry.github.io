@@ -74,7 +74,7 @@ For development my new go-to setup is:
 <div class="flex justify-center">
 <img src="https://user-images.githubusercontent.com/279789/186491771-6b910175-18ec-4c65-92b0-ed1a91bb15ed.svg" width="62%" alt="devbox preview" />
 </div>
-1. [**Terminal Multiplexer**](https://tmux.github.io/): I use tmux to manage multiple terminal sessions within a single window. This allows me to switch between tasks quickly without losing context.
+1. [**Terminal Multiplexer**](https://tmux.github.io/): I use tmux to manage multiple terminal sessions within a single window. This allows me to switch between tasks quickly without losing context. Another fun feature is that tmux sessions can be detached and reattached later, allowing me to keep my work running even if I disconnect from the remote machine (intentionally or unintentionally).
    1. [**Tmuxinator**](https://github.com/tmuxinator/tmuxinator): A tool to manage complex tmux sessions. It allows me to define and manage multiple tmux sessions with a single command. The YAML based configuration is also way easier to manage than tmux's native configuration.
    <div class="flex justify-center">
       <img src="https://user-images.githubusercontent.com/289949/44366875-1a6cee00-a49c-11e8-9322-76e70df0c88b.gif" width="62%" alt="tmuxinator demo" class="my-4"/>
