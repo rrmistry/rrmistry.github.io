@@ -3,6 +3,7 @@
 	import type { Blog } from '$lib/blog';
 	import BlogList from '$lib/BlogList.svelte';
 	import TagBadge from '$lib/components/TagBadge.svelte';
+	import * as Card from '$lib/components/ui/card/index.js';
 	import { breadcrumbs } from '../../stores/breadcrumb';
 
 	onMount(() => {
@@ -32,21 +33,16 @@
 
 	<BlogList>
 		{#snippet row(post: Blog)}
-			<article class="group bg-card border rounded-lg p-6 mb-4 hover:shadow-md transition-all duration-200 hover:border-primary/20">
-				<div class="flex flex-col space-y-3">
-					<div class="flex items-start justify-between gap-4">
-						<div class="flex-1 min-w-0">
-							<h2 class="text-xl font-semibold leading-tight mb-2">
-								<a href="/blogs/{post.slug}" 
-								   class="text-foreground hover:text-primary transition-colors group-hover:text-primary">
-									{post.title}
-								</a>
-							</h2>
-							<p class="text-muted-foreground leading-relaxed">
-								{post.description}
-							</p>
-						</div>
-						<time class="text-sm text-muted-foreground font-medium shrink-0 mt-1" 
+			<Card.Root class="group mb-4 hover:shadow-md transition-all duration-200 hover:border-primary/20">
+				<Card.Header class="pb-3">
+					<div class="flex items-start justify-between gap-4 mb-2">
+						<Card.Title class="text-xl leading-tight flex-1 min-w-0">
+							<a href="/blogs/{post.slug}" 
+							   class="text-foreground hover:text-primary transition-colors group-hover:text-primary">
+								{post.title}
+							</a>
+						</Card.Title>
+						<time class="text-sm text-muted-foreground font-medium shrink-0" 
 							  datetime={post.date}>
 							{new Intl.DateTimeFormat('en-US', {
 								year: 'numeric',
@@ -55,16 +51,21 @@
 							}).format(new Date(post.date))}
 						</time>
 					</div>
-					
-					{#if post.tags && post.tags.length > 0}
-						<div class="flex flex-wrap gap-2 pt-2">
+					<Card.Description class="leading-relaxed">
+						{post.description}
+					</Card.Description>
+				</Card.Header>
+				
+				{#if post.tags && post.tags.length > 0}
+					<Card.Footer class="pt-0">
+						<div class="flex flex-wrap gap-2">
 							{#each post.tags as tag}
 								<TagBadge {tag} class="text-xs" />
 							{/each}
 						</div>
-					{/if}
-				</div>
-			</article>
+					</Card.Footer>
+				{/if}
+			</Card.Root>
 		{/snippet}
 	</BlogList>
 </div>

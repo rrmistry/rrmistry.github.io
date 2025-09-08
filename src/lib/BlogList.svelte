@@ -11,8 +11,9 @@
 		row: Snippet<[Blog]>;
 		limit?: number;
 		hideSearch?: boolean;
+		variant?: 'default' | 'sidebar';
 	}
-	let { row, limit, hideSearch = false, ...restProps }: Props = $props();
+	let { row, limit, hideSearch = false, variant = 'default', ...restProps }: Props = $props();
 
 	let searchTerm = $state('');
 	let posts = $state([]);
@@ -106,9 +107,28 @@
 	</div>
 {/if}
 
-<div class="space-y-0">
+<div class={variant === 'sidebar' ? 'space-y-2' : 'space-y-0'}>
 	{#each filteredPosts as post}
-		{@render row(post)}
+		{#if variant === 'sidebar'}
+			<div class="bg-card border rounded-md p-3 hover:shadow-sm transition-all duration-200 hover:border-primary/20 group">
+				<a href="/blogs/{post.slug}" data-sveltekit-reload class="block w-full">
+					<div class="flex flex-col space-y-2">
+						<span class="line-clamp-2 text-sm font-medium leading-tight text-foreground group-hover:text-primary transition-colors">
+							{post.title}
+						</span>
+						<time class="text-xs text-muted-foreground" datetime={post.date}>
+							{new Intl.DateTimeFormat('en-US', {
+								month: 'short',
+								day: 'numeric',
+								year: 'numeric'
+							}).format(new Date(post.date))}
+						</time>
+					</div>
+				</a>
+			</div>
+		{:else}
+			{@render row(post)}
+		{/if}
 	{/each}
 </div>
 
