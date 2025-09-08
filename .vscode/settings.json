@@ -14,4 +14,16 @@
 	"editor.insertSpaces": false,
 	"devbox.autoShellOnTerminal": true,
 	"editor.formatOnSave": true,
+	"cSpell.words": [
+		"rohit",
+		"mistry",
+		"rrmistry",
+		"jetify",
+		"devbox",
+		"shadcn",
+		"blazor",
+		"mdsvex",
+		"tailwind",
+		"svelte",
+	],
 }

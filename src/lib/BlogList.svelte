@@ -9,8 +9,10 @@
 
 	interface Props {
 		row: Snippet<[Blog]>;
+		limit?: number;
+		hideSearch?: boolean;
 	}
-	let { row, ...restProps }: Props = $props();
+	let { row, limit, hideSearch = false, ...restProps }: Props = $props();
 
 	let searchTerm = $state('');
 	let posts = $state([]);
@@ -29,13 +31,16 @@
 		}
 		
 		const res = await fetch('/api/posts');
-		posts = await res.json();
+		const fetchedPosts = await res.json();
+		
+		// Sort posts by date in reverse chronological order (newest first)
+		posts = fetchedPosts.sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
 		
 		// Apply initial search if exists
 		if (searchTerm) {
 			search();
 		} else {
-			filteredPosts = posts;
+			filteredPosts = limit ? posts.slice(0, limit) : posts;
 		}
 	});
 
@@ -44,22 +49,24 @@
 		if (searchTerm.startsWith('tag:')) {
 			const tag = searchTerm.slice(4).trim();
 			if (tag) {
-				filteredPosts = posts.filter(
+				const filtered = posts.filter(
 					(post) =>
 						post.tags &&
 						post.tags.some((t) => t.toLowerCase().includes(tag.toLowerCase()))
 				);
+				filteredPosts = limit ? filtered.slice(0, limit) : filtered;
 			} else {
-				filteredPosts = posts;
+				filteredPosts = limit ? posts.slice(0, limit) : posts;
 			}
 		} else {
 			const term = searchTerm.toLowerCase().trim();
 			if (term && term.length > 0) {
-				filteredPosts = posts.filter(
+				const filtered = posts.filter(
 					(post) => post.title && post.title.toLowerCase().includes(term)
 				);
+				filteredPosts = limit ? filtered.slice(0, limit) : filtered;
 			} else {
-				filteredPosts = posts;
+				filteredPosts = limit ? posts.slice(0, limit) : posts;
 			}
 		}
 		
@@ -87,13 +94,35 @@
 	}
 </script>
 
-<Input
-	bind:value={searchTerm}
-	oninput={search}
-	onchange={search}
-	placeholder="Search title or use tag:tagname"
-/>
+{#if !hideSearch}
+	<div class="mb-6">
+		<Input
+			bind:value={searchTerm}
+			oninput={search}
+			onchange={search}
+			placeholder="Search by title or use tag:tagname..."
+			class="max-w-md"
+		/>
+	</div>
+{/if}
 
-{#each filteredPosts as post}
-	{@render row(post)}
-{/each}
+<div class="space-y-0">
+	{#each filteredPosts as post}
+		{@render row(post)}
+	{/each}
+</div>
+
+{#if filteredPosts.length === 0 && searchTerm}
+	<div class="text-center py-12">
+		<div class="text-muted-foreground">
+			<p class="text-lg mb-2">No posts found</p>
+			<p class="text-sm">Try a different search term or <button class="text-primary hover:underline" onclick={() => { searchTerm = ''; search(); }}>clear the search</button></p>
+		</div>
+	</div>
+{:else if filteredPosts.length === 0}
+	<div class="text-center py-12">
+		<div class="text-muted-foreground">
+			<p class="text-lg">No blog posts available</p>
+		</div>
+	</div>
+{/if}

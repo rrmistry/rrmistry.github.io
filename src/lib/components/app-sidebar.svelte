@@ -107,15 +107,29 @@
 							{/snippet}
 						</Sidebar.MenuButton>
 					</Sidebar.MenuItem>
-					<BlogList>
+					<BlogList limit={5} hideSearch={true}>
 						{#snippet row(post: Blog)}
 							<Sidebar.MenuItem>
-								<Sidebar.MenuButton>
+								<Sidebar.MenuButton class="h-auto px-2 py-2">
 									{#snippet child({ props })}
-										<a href="/blogs/{post.slug}" data-sveltekit-reload {...props}>
-											<span class="mt-1">
-												{post.title}
-											</span>
+										<a
+											href="/blogs/{post.slug}"
+											data-sveltekit-reload
+											{...props}
+											class="block w-full"
+										>
+											<div class="flex flex-col items-start space-y-1 text-left">
+												<span class="line-clamp-2 text-sm font-medium leading-tight">
+													{post.title}
+												</span>
+												<time class="text-xs text-muted-foreground" datetime={post.date}>
+													{new Intl.DateTimeFormat('en-US', {
+														month: 'short',
+														day: 'numeric',
+														year: 'numeric'
+													}).format(new Date(post.date))}
+												</time>
+											</div>
 										</a>
 									{/snippet}
 								</Sidebar.MenuButton>
