@@ -1,6 +1,6 @@
 ---
 title: 'Building a Modern Blog with Svelte 5, shadcn/ui, and Tailwind CSS'
-date: 2023-10-01
+date: 2024-10-01
 description: 'Complete guide to building a modern blog using Svelte 5, shadcn/ui components, Tailwind CSS, and Devbox. Learn why I chose these technologies over React and Bootstrap.'
 tags:
   [

@@ -6,7 +6,6 @@
 	import TagBadge from '$lib/components/TagBadge.svelte';
 	import { breadcrumbs } from '@/stores/breadcrumb';
 
-
 	onMount(() => {
 		breadcrumbs.set([
 			{ href: '/', label: 'Home' },
@@ -25,15 +24,6 @@
 <BlogList>
 	{#snippet row(post: Blog)}
 		<Table.Row>
-			<Table.Cell class="font-medium">
-				<a href="/blogs/{post.slug}">{post.title}</a></Table.Cell
-			>
-			<Table.Cell>{post.description}</Table.Cell>
-			<Table.Cell class="text-right">
-				{#each post.tags as tag}
-					<TagBadge {tag} class="mr-1" />
-				{/each}
-			</Table.Cell>
 			<Table.Cell class="text-right"
 				>{new Intl.DateTimeFormat('en-US', {
 					year: 'numeric',
@@ -41,6 +31,15 @@
 					day: 'numeric'
 				}).format(new Date(post.date))}</Table.Cell
 			>
+			<Table.Cell class="font-medium">
+				<a href="/blogs/{post.slug}">{post.title}</a>
+				{post.description}
+			</Table.Cell>
+			<Table.Cell class="text-right">
+				{#each post.tags as tag}
+					<TagBadge {tag} class="mr-1" />
+				{/each}
+			</Table.Cell>
 		</Table.Row>
 	{/snippet}
 </BlogList>

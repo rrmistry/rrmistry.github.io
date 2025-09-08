@@ -2,6 +2,7 @@
 	import TopLeftIcon from 'lucide-svelte/icons/at-sign';
 	import House from 'lucide-svelte/icons/house';
 	import ResumeIcon from 'lucide-svelte/icons/file-user';
+	import ContactIcon from 'lucide-svelte/icons/contact-round';
 	import BlogIcon from 'lucide-svelte/icons/rss';
 	// sample data
 	const data = {
@@ -17,9 +18,14 @@
 						icon: House
 					},
 					{
-						title: 'Resume',
+						title: 'CV',
 						url: '/resume',
 						icon: ResumeIcon
+					},
+					{
+						title: 'Contact',
+						url: '/contact',
+						icon: ContactIcon
 					}
 				]
 			}

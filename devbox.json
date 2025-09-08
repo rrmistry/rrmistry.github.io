@@ -25,10 +25,8 @@
   },
   "shell": {
     "init_hook": [
-      "echo 'Welcome! See README.md for tips on contributing to this repo.'",
-      "echo '🔧 Setting up git hooks...'",
       "git config core.hooksPath .git-hooks",
-      "echo '✅ Git hooks configured!'",
+      "echo 'Welcome! See README.md for tips on contributing to this repo.'",
     ],
     "scripts": {
       "npm-install": [
@@ -45,6 +43,9 @@
       ],
       "ci:local": [
         "act push --job build_and_test --secret-file .secrets",
+      ],
+      "mcp:browser-tools": [
+        "npx -y @agentdeskai/browser-tools-server@1.2.0",
       ],
     },
   },

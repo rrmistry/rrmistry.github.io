@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "browser-tools": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@agentdeskai/browser-tools-mcp@1.2.0"
+      ],
+      "env": {}
+    }
+  }
+}

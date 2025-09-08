@@ -55,3 +55,6 @@ windows:
   - terminal:
       panes:
         - # Empty pane for general terminal use
+  - npm-dev:
+      panes:
+        - npm run dev -- --host=0.0.0.0
