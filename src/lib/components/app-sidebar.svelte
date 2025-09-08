@@ -4,7 +4,7 @@
 	import ResumeIcon from 'lucide-svelte/icons/file-user';
 	import ContactIcon from 'lucide-svelte/icons/contact-round';
 	import BlogIcon from 'lucide-svelte/icons/rss';
-	// sample data
+	// app sidebar links data
 	const data = {
 		versions: ['1.0.1', '1.1.0-alpha', '2.0.0-beta1'],
 		navMain: [
@@ -34,13 +34,10 @@
 </script>
 
 <script lang="ts">
-	import SearchForm from '$lib/components/search-form.svelte';
-	import VersionSwitcher from '$lib/components/version-switcher.svelte';
 	import * as Sidebar from '$lib/components/ui/sidebar/index.js';
 	import LightDarkButton from '$lib/components/light-dark-button.svelte';
 	import { Separator } from '$lib/components/ui/separator/index.js';
 	import type { ComponentProps } from 'svelte';
-	import Contact from '$lib/Contact.svelte';
 	import BlogList from '$lib/BlogList.svelte';
 	import type { Blog } from '$lib/blog';
 
@@ -55,11 +52,15 @@
 			>
 				<div class="flex items-center">
 					<div
-						class="aspect-square flex size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground"
+						class="aspect-square flex size-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 text-white shadow-lg"
 					>
 						<TopLeftIcon class="size-4" />
 					</div>
-					<div class="ml-2 mr-2 content-center font-semibold">Rohit Mistry</div>
+					<div class="ml-2 mr-2 content-center font-semibold">
+						<span class="bg-gradient-to-r from-blue-700 to-purple-700 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+							Rohit Mistry
+						</span>
+					</div>
 				</div>
 				<div class="flex items-center">
 					<Separator orientation="vertical" class="mr-2 h-4" />
@@ -79,11 +80,20 @@
 							<Sidebar.MenuItem>
 								<Sidebar.MenuButton>
 									{#snippet child({ props })}
-										<a href={item.url} data-sveltekit-reload {...props}>
+										<a
+											href={item.url}
+											data-sveltekit-reload
+											{...props}
+											class="group flex items-center gap-3 rounded-md px-3 py-2 relative overflow-hidden transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-500/10 hover:via-purple-500/8 hover:to-indigo-500/10 hover:shadow-md hover:shadow-blue-500/10 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-blue-400/10 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-500 before:ease-out"
+										>
 											{#if item.icon}
-												<item.icon />
+												<item.icon
+													class="h-4 w-4 transition-colors duration-200 group-hover:text-blue-600"
+												/>
 											{/if}
-											<span>{item.title}</span>
+											<span class="transition-colors duration-200 group-hover:text-blue-700"
+												>{item.title}</span
+											>
 										</a>
 									{/snippet}
 								</Sidebar.MenuButton>
@@ -100,9 +110,16 @@
 					<Sidebar.MenuItem>
 						<Sidebar.MenuButton>
 							{#snippet child({ props })}
-								<a href="/blogs" data-sveltekit-reload {...props}>
-									<BlogIcon />
-									<span>Blogs</span>
+								<a
+									href="/blogs"
+									data-sveltekit-reload
+									{...props}
+									class="group flex items-center gap-3 rounded-md px-3 py-2 relative overflow-hidden transition-all duration-300 hover:bg-gradient-to-r hover:from-green-500/10 hover:via-blue-500/8 hover:to-teal-500/10 hover:shadow-md hover:shadow-green-500/10 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-green-400/10 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-500 before:ease-out"
+								>
+									<BlogIcon class="h-4 w-4 transition-colors duration-200 group-hover:text-green-600" />
+									<span class="transition-colors duration-200 group-hover:text-green-700"
+										>Blogs</span
+									>
 								</a>
 							{/snippet}
 						</Sidebar.MenuButton>

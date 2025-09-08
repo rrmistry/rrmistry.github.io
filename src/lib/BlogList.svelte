@@ -103,7 +103,7 @@
 
 {#if !hideSearch}
 	<div class="mb-6">
-		<div class="relative max-w-md">
+		<div class="relative w-full">
 			<Input
 				bind:value={searchTerm}
 				oninput={search}
@@ -125,7 +125,7 @@
 	</div>
 {/if}
 
-<div class={variant === 'sidebar' ? 'space-y-2' : 'space-y-0'}>
+<div class={variant === 'sidebar' ? 'space-y-2' : 'space-y-6'}>
 	{#each filteredPosts as post}
 		{#if variant === 'sidebar'}
 			<div class="bg-card border rounded-md p-3 hover:shadow-sm transition-all duration-200 hover:border-primary/20 group">
