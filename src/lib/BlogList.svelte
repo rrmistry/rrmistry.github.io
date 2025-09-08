@@ -6,6 +6,7 @@
 	import type { Snippet } from 'svelte';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
+	import { X } from 'lucide-svelte';
 
 	interface Props {
 		row: Snippet<[Blog]>;
@@ -93,17 +94,34 @@
 			goto(url, { replaceState: true, keepFocus: true });
 		}
 	}
+
+	function clearSearch() {
+		searchTerm = '';
+		search();
+	}
 </script>
 
 {#if !hideSearch}
 	<div class="mb-6">
-		<Input
-			bind:value={searchTerm}
-			oninput={search}
-			onchange={search}
-			placeholder="Search by title or use tag:tagname..."
-			class="max-w-md"
-		/>
+		<div class="relative max-w-md">
+			<Input
+				bind:value={searchTerm}
+				oninput={search}
+				onchange={search}
+				placeholder="Search by title or use tag:tagname..."
+				class="pr-10"
+			/>
+			{#if searchTerm}
+				<button
+					type="button"
+					onclick={clearSearch}
+					class="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors p-1 rounded-sm hover:bg-muted"
+					aria-label="Clear search"
+				>
+					<X class="h-4 w-4" />
+				</button>
+			{/if}
+		</div>
 	</div>
 {/if}
 
