@@ -4,9 +4,13 @@
 	<div class="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse transition-opacity duration-1000"></div>
 	<div class="relative z-10">
 		<h1 class="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text text-transparent">
-			Welcome!
+			Hey, I'm Rohit
 		</h1>
-		
+
+		<p class="text-2xl mb-6 text-white font-medium">
+			I architect cloud solutions that cut costs and unlock data insights.
+		</p>
+
 		<p class="text-lg mb-4 text-blue-100">
 			I don't blog often, but when I do, it's because I've found or created something that I think is
 			truly unique and worth sharing. It might be a code snippet, a technique, or a perspective that I
@@ -14,8 +18,8 @@
 		</p>
 
 		<p class="text-lg text-blue-100">
-			If you like something here or found it useful, please share it with others. You can find me on 
-			<a href="https://github.com/rrmistry" 
+			If you like something here or found it useful, please share it with others. You can find me on
+			<a href="https://github.com/rrmistry"
 			   class="font-semibold text-white hover:text-blue-200 transition-colors duration-200 underline decoration-blue-400 hover:decoration-blue-300">
 				GitHub
 			</a>.

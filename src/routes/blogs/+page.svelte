@@ -27,7 +27,7 @@
 			</a>
 		</h1>
 		<p class="text-muted-foreground text-lg bg-gradient-to-r from-slate-600 to-slate-700 bg-clip-text text-transparent dark:from-slate-300 dark:to-slate-400">
-			Thoughts, insights, and learnings from my journey in software development
+			Real-world solutions and insights from building cloud-native systems
 		</p>
 	</div>
 

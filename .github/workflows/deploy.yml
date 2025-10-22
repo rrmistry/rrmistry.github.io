@@ -25,11 +25,26 @@ jobs:
             echo "PAGES_URL=rrmistry.ca" >> "$GITHUB_OUTPUT"
           fi
 
+  get_playwright_version:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.get_version.outputs.version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get Playwright version from package.json
+        id: get_version
+        run: |
+          PLAYWRIGHT_VERSION=$(node -p "require('./package.json').devDependencies['@playwright/test'].replace(/[\^~]/, '')")
+          echo "version=$PLAYWRIGHT_VERSION" >> "$GITHUB_OUTPUT"
+          echo "Using Playwright version: $PLAYWRIGHT_VERSION"
+
   build_and_test:
-    needs: [get_pages_url_job]
+    needs: [get_pages_url_job, get_playwright_version]
     runs-on: ubuntu-latest
     container:
-      image: mcr.microsoft.com/playwright:v1.50.1-noble
+      image: mcr.microsoft.com/playwright:v${{ needs.get_playwright_version.outputs.version }}-noble
       options: --user 1001
     env:
       DEV_SERVER_PORT: 8080

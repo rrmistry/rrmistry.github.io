@@ -17,11 +17,9 @@ permalink: /resume
 
 # Background:
 
-Strategic Cloud & Data Architect | Cross-Functional Technology Leader
+**I architect cloud solutions that cut costs and unlock data insights.**
 
-Driving Enterprise Data Governance, Security, and Architectural Excellence
-
-Innovative technologist with a proven track record of designing robust, compliant data ecosystems that bridge technical complexity and organizational objectives. Expert in architecting scalable cloud solutions that ensure regulatory compliance, enhance operational security, and enable data-driven decision-making through seamless integration of cutting-edge technologies and cross-functional collaboration.
+Cloud & Data Architect specializing in building secure, compliant data ecosystems that bridge technical complexity and business objectives. Proven track record of delivering scalable solutions with measurable impact—from $3.8M infrastructure savings to automating processes that save 2500+ hours weekly.
 
 ---
 
@@ -36,20 +34,20 @@ Innovative technologist with a proven track record of designing robust, complian
 
 # Most Recent Professional Experience:
 
-<b>Cloud / Data Architect, <a href="https://www.righteous.ai" target="_blank">Righteous AI, Toronto, Canada</a> (Nov 2018 - Present, 5 years)</b>
+<b>Cloud / Data Architect, <a href="https://www.righteous.ai" target="_blank">Righteous AI, Toronto, Canada</a> (Nov 2018 - Present)</b>
 
-- Running private consulting practice for clients in the finance sector.
-- Execute cloud-based solution development and data engineering projects.
-- Collaborated closely with stakeholders to design, develop, and maintain high-quality solutions.
+- Running private consulting practice specializing in finance sector cloud modernization.
+- Led multi-million dollar Azure migrations with focus on cost optimization and compliance.
+- Built end-to-end data pipelines processing sensitive financial data with GDPR/SOC2 compliance.
 - **Key Technologies:** Informatica, Azure SQL, Kubernetes, Python
 
-<b>ASP.NET & Python Developer / Data Engineer, <a href="https://www.we.org/en-US/" target="_blank">WE Charity, Toronto, Canada</a> (Nov 2017 - Dec 2018, 1 year)</b>
+<b>ASP.NET & Python Developer / Data Engineer, <a href="https://www.we.org/en-US/" target="_blank">WE Charity, Toronto, Canada</a> (Nov 2017 - Dec 2018)</b>
 
 - Developed and integrated web services and APIs, significantly enhancing data processes.
 - Played a key role in data transformation projects, employing strong ETL techniques.
 - **Key Technologies:** Azure Data Factory, Azure SQL, Power BI, Azure App Service, Azure Functions, C# / Python
 
-<b>C++ / C# .NET Developer, <a href="https://www.ggy.com/" target="_blank">Moody’s Analytics, Toronto, Canada</a> (Jul 2015 - Nov 2017, 2 years)</b>
+<b>C++ / C# .NET Developer, <a href="https://www.ggy.com/" target="_blank">Moody's Analytics, Toronto, Canada</a> (Jul 2015 - Nov 2017)</b>
 
 - Led cloud computing projects, emphasizing .NET development and cloud infrastructure optimization.
 - Pioneered innovative solutions, setting industry standards in actuarial cloud computing.
