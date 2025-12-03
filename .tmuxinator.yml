@@ -1,9 +1,13 @@
 # .tmuxinator.yml - Tmuxinator configuration for rrmistry.github.io
-name: rrmistry-github-io
+name: <%= File.basename(ENV["PWD"]) %>
 root: <%= ENV["PWD"] || "." %>
 
-# Optional tmux socket
-# socket_name: foo
+# Optional environment variables
+dotenv: true
+
+# Use project-specific socket for environment isolation
+# This ensures each project gets its own tmux server with its own $PATH
+socket_name: <%= File.basename(ENV["PWD"]) %>
 
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
