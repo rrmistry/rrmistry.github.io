@@ -33,10 +33,10 @@
         "npm install",
       ],
       "tmux": [
-        "tmuxinator start rrmistry-github-io -p $PWD/.tmuxinator.yml",
+        "tmuxinator start $(basename $PWD) -p $PWD/.tmuxinator.yml",
       ],
       "tmux:stop": [
-        "tmuxinator stop rrmistry-github-io -p $PWD/.tmuxinator.yml",
+        "tmuxinator stop $(basename $PWD) -p $PWD/.tmuxinator.yml",
       ],
       "dev": [
         "npm run dev",
