@@ -1,4 +1,4 @@
-# .tmuxinator.yml - Tmuxinator configuration for rrmistry.github.io
+# .tmuxinator.yml - Tmuxinator configuration
 name: <%= File.basename(ENV["PWD"]) %>
 root: <%= ENV["PWD"] || "." %>
 
