@@ -15,7 +15,6 @@
     "fzf@latest",
     "fd@latest",
     "lazygit@latest",
-    "claude-code@latest",
   ],
   "include": [],
   "description": "DevBox with standard tools and packages easily installed",
@@ -33,19 +32,16 @@
         "npm install",
       ],
       "tmux": [
-        "tmuxinator start $(basename $PWD) -p $PWD/.tmuxinator.yml",
+        "tmuxinator start rrmistry-github-io -p $PWD/.tmuxinator.yml",
       ],
       "tmux:stop": [
-        "tmuxinator stop $(basename $PWD) -p $PWD/.tmuxinator.yml",
+        "tmuxinator stop rrmistry-github-io -p $PWD/.tmuxinator.yml",
       ],
       "dev": [
-        "npm run dev",
+        "npm run dev -- --host=0.0.0.0",
       ],
       "ci:local": [
         "act push --job build_and_test --secret-file .secrets",
-      ],
-      "mcp:browser-tools": [
-        "npx -y @agentdeskai/browser-tools-server@1.2.0",
       ],
     },
   },

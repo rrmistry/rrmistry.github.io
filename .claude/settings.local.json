@@ -14,8 +14,8 @@
     "deny": [],
     "ask": []
   },
+  "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
-    "browser-tools"
-  ],
-  "enableAllProjectMcpServers": false
+    "playwright"
+  ]
 }
