@@ -608,6 +608,8 @@ If your organization is considering this journey, here's my advice:
 3. **Bring actuaries into the process**: They know the workload better than anyone.
 4. **Plan for IFRS17**: If you haven't felt the computational pressure yet, you will.
 
+> **Source Code Available**: I've open-sourced a sanitized version of the infrastructure code described in this article. You can find the Terraform modules, Packer templates, and PowerShell scripts at [github.com/righteouslabs/manulife-moodys-axis-build-and-destroy](https://github.com/righteouslabs/manulife-moodys-axis-build-and-destroy).
+
 This is niche knowledge. There aren't many people who've done this end-to-end at enterprise scale. If you're working on something similar and want to compare notes, I'd love to hear from you.
 
 ---
